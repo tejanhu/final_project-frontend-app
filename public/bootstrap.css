@@ -4934,6 +4934,8 @@ tbody.collapse.show {
   margin-bottom: 2rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+    margin-top: 10px;
+    position: relative;
 }
 
 @media (min-width: 576px) {
