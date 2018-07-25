@@ -143,3 +143,9 @@
     top: 45%;
 }
 
+.storyText {
+    position: absolute;
+    width:50%;
+    left: 45%;
+}
+
