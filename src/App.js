@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from "./navbar.js";
+import Navbar from "./feature/Shell/navbar.js";
 import Body from "./body.js";
-import Footer from "./footer.js";
+import Footer from "./feature/Shell/footer.js";
 
 class App extends Component {
 
