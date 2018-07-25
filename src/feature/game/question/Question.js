@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import Difficulty from "../Difficulty";
+import BattleInfo from "./BattleInfo";
+
 
 class Question extends Component {
     state = { loading: false };
@@ -14,11 +16,11 @@ class Question extends Component {
     render(){
         return (
             <div>
-                <h4>Difficulty selection:</h4>
-                <button>Easy</button><button>Medium</button><button>Hard</button>
-                <div className="jumbotron">
-                    <img src={require("../../../resources/people.svg")} className="player"></img>
-
+                <Difficulty/>
+                <div className="jumbotronMain">
+                    <div className={"jumbotronPlayerInfo"}></div>
+                    <div className={"jumbotronEnemyInfo"}></div>
+                    <BattleInfo/>
                 </div>
             </div>
         )

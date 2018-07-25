@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import './game.css';
-import Layout from './navigation/Layout';
 import PlayerInfo from './navigation/PlayerInfo';
 import Compass from "./navigation/Compass";
+import Difficulty from "./Difficulty";
 
 
 class Game extends Component {
@@ -19,9 +18,12 @@ class Game extends Component {
     render() {
         return (
             <div>
-                <Layout/>
-                <PlayerInfo/>
-                <Compass/>
+                    <Difficulty/>
+                    <div className="jumbotronMain">
+                        <div className={"jumbotronPlayerInfo"}></div>
+                        <PlayerInfo/>
+                        <Compass/>
+                    </div>
             </div>
     );
     }
