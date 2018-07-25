@@ -53,7 +53,7 @@ section .section-title {
 #footer a {
   color: #6c757d!important;
   text-decoration: none !important;
-  background-color: transparent;
+  background-color: #f5f5f5 !important;
   -webkit-text-decoration-skip: objects;
 }
 #footer ul.social li{
