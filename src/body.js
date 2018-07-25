@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Navbar from "./navbar.js";
+import Navbar from "./feature/Shell/navbar.js";
 import Question from './feature/game/question/Question';
 import ReactDOM from "react-dom";
 import Game from './feature/game/Game';
