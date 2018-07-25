@@ -14,8 +14,8 @@ class Difficulty extends Component {
 
     render() {
         return (
-            <div className={"difficulty"}>
-                <h4>Difficulty selection:</h4>
+            <div className={"difficultyMain"}>
+                <h4 className={"difficultyTitle"}>Difficulty selection:</h4>
                 <button id={"easy"} className={"difficulty"}>Easy</button>
                 <button id={"medium"} className={"difficulty"}>Medium</button>
                 <button id={"hard"} className={"difficulty"}>Hard</button>
