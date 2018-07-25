@@ -40,7 +40,7 @@ class Navigation extends Component {
                     <button className="buttonWest">West</button>
                     <button className="buttonEast">East</button>
                 </div>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
 
     );
