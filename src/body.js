@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import Navbar from "./navbar.js";
 import Question from './feature/game/question/Question';
 import ReactDOM from "react-dom";
-import Navigation from './feature/game/Navigation';
+import Game from './feature/game/Game';
 
 
 class Body extends Component{
 
     handleGame(){
-        ReactDOM.render(<Navigation/>, document.getElementById("body"));
+        ReactDOM.render(<Game/>, document.getElementById("body"));
     }
 
     render(){
