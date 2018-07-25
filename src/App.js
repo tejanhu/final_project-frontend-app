@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-import Navigation from "./feature/game/Navigation";
+import Game from "./feature/game/Game";
 
 class App extends Component {
 
     handleGame(){
-        ReactDOM.render(<Navigation/>, document.getElementById("root"));
+        ReactDOM.render(<Game/>, document.getElementById("root"));
     }
 
     render() {
