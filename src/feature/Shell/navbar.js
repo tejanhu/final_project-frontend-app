@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import Contact from "../Forms/contact";
 import ReactDOM from 'react-dom';
 
 class Navbar extends Component{
+
+
+    handleContact(){
+        ReactDOM.render(<Contact/>, document.getElementById("body"));
+    }
 
     render(){
         return(
@@ -20,7 +26,7 @@ class Navbar extends Component{
                             <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" href="#">About</a>
-                                <a className="dropdown-item" href="#">Contact</a>
+                                <a className="dropdown-item" onClick={this.handleContact}>Contact</a>
                             </div>
                         </li>
                         <li className="nav-item dropdown">

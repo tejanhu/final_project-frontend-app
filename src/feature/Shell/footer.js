@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import ReactDOM from "react-dom";
+import Contact from "../Forms/contact";
+
 
 class Footer extends Component{
 
+    handleContact(){
+        ReactDOM.render(<Contact/>, document.getElementById("body"));
+    }
 
 
     render(){
@@ -35,7 +41,7 @@ class Footer extends Component{
                             {/*<h5>Help</h5>*/}
                             <ul className="list-unstyled quick-links">
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>FAQs</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Contact Us</a></li>
+                                <li><a onClick={this.handleContact}><i className="fa fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
