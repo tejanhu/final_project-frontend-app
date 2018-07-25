@@ -11,33 +11,31 @@ class Footer extends Component{
                 <div className="container">
                     <div className="row text-center text-xs-center text-sm-left text-md-left">
                         <div className="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
+                            {/*<h5>Quick links</h5>*/}
                             <ul className="list-unstyled quick-links">
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Info</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>About Us</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Books</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                             </ul>
                         </div>
                         <div className="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
+                            {/*<h5>Legal</h5>*/}
                             <ul className="list-unstyled quick-links">
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Info</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Privacy</a></li>
+                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>*/}
+                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>*/}
+                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>*/}
                             </ul>
                         </div>
                         <div className="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
+                            {/*<h5>Help</h5>*/}
                             <ul className="list-unstyled quick-links">
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Info</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>FAQs</a></li>
+                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
