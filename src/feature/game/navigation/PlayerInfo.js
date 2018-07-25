@@ -22,7 +22,7 @@ class PlayerInfo extends Component {
                     <div>Current level: 8</div>
                     <div>To next level: 854/1000</div>
                 </div>
-                <img src={require("../../../resources/people.svg)} className="player"></img>
+                <img src={require("../../../resources/people.svg")} className="player"></img>
             </div>
         );
     }
