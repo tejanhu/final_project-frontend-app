@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5582a221-a23a-4b20-a4b4-4dd81c3e707c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerInfo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerInfo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="360">
+              <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -62,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Compass.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Compass.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/Compass.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -162,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/feature/game/Compass.js" />
         <option value="$PROJECT_DIR$/src/feature/game/Game.js" />
         <option value="$PROJECT_DIR$/src/feature/game/navigation/Compass.js" />
+        <option value="$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js" />
       </list>
     </option>
   </component>
@@ -281,6 +278,14 @@
               <item name="kidsapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="kidsapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="feature" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kidsapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kidsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -387,15 +392,16 @@
       <updated>1532433267438</updated>
       <workItem from="1532433269848" duration="1791000" />
       <workItem from="1532440620202" duration="4000" />
-      <workItem from="1532440633280" duration="14376000" />
+      <workItem from="1532440633280" duration="14493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16174000" />
+    <option name="totallyTimeSpent" value="16291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1562" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23815621" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -677,20 +683,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js">
+    <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/Compass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/Compass.js">
+    <entry file="file://$PROJECT_DIR$/src/feature/game/navigation/PlayerInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="360">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
