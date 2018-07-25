@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './navigation.css';
+import Navbar from "../../navbar";
+import Footer from "../../footer";
+
 
 
 class Navigation extends Component {
@@ -16,6 +19,7 @@ class Navigation extends Component {
     render() {
         return (
             <div>
+
                 <h4>Difficulty selection:</h4>
                 <button>Easy</button><button>Medium</button><button>Hard</button>
                 <div className="jumbotronMain">
@@ -36,7 +40,9 @@ class Navigation extends Component {
                     <button className="buttonWest">West</button>
                     <button className="buttonEast">East</button>
                 </div>
+                {/*<Footer/>*/}
             </div>
+
     );
     }
 }
