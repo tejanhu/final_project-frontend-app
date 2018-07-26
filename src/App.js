@@ -4,6 +4,7 @@ import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
 import About from "./feature/About/about";
+import Lessons from "./feature/Lessons/Lessons";
 import Contact from "./feature/Contact/contact";
 import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
@@ -28,6 +29,8 @@ class App extends Component {
               return <Contact />
           case "glossary":
               return <Glossary />
+          case "lessons":
+              return <Lessons />
           case "books":
               return <Books />
           default:

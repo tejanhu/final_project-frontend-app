@@ -14,7 +14,7 @@ class Footer extends Component{
                             <ul className="list-unstyled quick-links">
                                 <li><a onClick={() => this.props.handleClick("about")}><i className="fa fa-angle-double-right"></i>About Us</a></li>
                                 <li><a onClick={() => this.props.handleClick("glossary")}><i className="fa fa-angle-double-right"></i>Glossary</a></li>
-                                <li><a onClick={this.handleLessons}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
+                                <li><a onClick={() => this.props.handleClick("lessons")}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                                 <li><a onClick={() => this.props.handleClick("books")}><i className="fa fa-angle-double-right"></i>Books</a></li>
                             </ul>
                         </div>
