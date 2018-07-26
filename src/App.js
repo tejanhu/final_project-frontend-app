@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Navbar from "./feature/Shell/navbar.js";
-import Body from "./body.js";
 import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
 import About from "./feature/About/about";
-
+import Contact from "./feature/Contact/contact";
+import Glossary from "./feature/Glossary/Glossary";
+import Books from "./feature/Books/Books";
 
 class App extends Component {
     constructor(props) {
@@ -23,6 +24,12 @@ class App extends Component {
               return <Game />
           case "about":
               return <About />
+          case "contact":
+              return <Contact />
+          case "glossary":
+              return <Glossary />
+          case "books":
+              return <Books />
           default:
               return <Home />
       }  
