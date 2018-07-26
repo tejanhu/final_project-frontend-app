@@ -9,35 +9,12 @@ import Glossary from "../Glossary/Glossary";
 
 
 class Navbar extends Component{
-
-    handleHome(){
-        ReactDOM.render(<Home/>, document.getElementById("body"));
-    }
-
-    handleContact(){
-        ReactDOM.render(<Contact/>, document.getElementById("body"));
-    }
-
-    handleAbout(){
-        ReactDOM.render(<About/>, document.getElementById("body"));
-    }
-
-    handleLessons() {
-        ReactDOM.render(<Lessons/>, document.getElementById("body"));
-    }
-
-    handleBooks() {
-        ReactDOM.render(<Books/>, document.getElementById("body"));
-    }
-
-    handleGlossary(){
-        ReactDOM.render(<Glossary/>, document.getElementById("body"));
-    }
+    
 
     render(){
         return(
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" onClick={this.handleHome}>Logo</a>
+                <a className="navbar-brand" onClick={() => this.props.handleClick("home")}>Logo</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -45,7 +22,10 @@ class Navbar extends Component{
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <a className="nav-link" onClick={this.handleHome}>Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" onClick={() => this.props.handleClick("home")}>Home <span className="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item ">
+                            <a className="nav-link" onClick={() => this.props.handleClick("game")}>Game <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>

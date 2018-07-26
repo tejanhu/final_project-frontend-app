@@ -1,25 +1,25 @@
-.buttonNorth {
+.buttonNORTH {
     position: absolute;
     left:18%;
     top: 50%;
     font-size: 1.3vw;
 }
 
-.buttonSouth {
+.buttonSOUTH {
     position: absolute;
     left: 18%;
     top: 85%;
     font-size: 1.3vw;
 }
 
-.buttonEast {
+.buttonWEST {
     position: absolute;
     left: 10%;
     top: 66%;
     font-size: 1.3vw;
 }
 
-.buttonWest {
+.buttonEAST {
     position: absolute;
     left: 26%;
     top:66%;
@@ -144,6 +144,16 @@
     top:3%;
 }
 
+.world {
+    background-color: #96ef7d;
+    border-radius: 0.3rem;
+    height: 94%;
+    width: 61%;
+    position: absolute;
+    left:38%;
+    top:3%;
+}
+
 .versus {
     height: 16%;
     width: 6%;
@@ -160,6 +170,16 @@
     top:8%;
     left: 41%;
     font-size: 1.5vw;
+}
+
+.display{
+    box-shadow: 5px 5px;
+    border-radius: 0.3rem;
+    position: absolute;
+    height: 94%;
+    width: 61%;
+    left:38%;
+    top:3%;
 }
 
 .question {

@@ -8,7 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Banner />
+                <Banner handleClick={this.props.handleClick}/>
             </div>
         );
     }
