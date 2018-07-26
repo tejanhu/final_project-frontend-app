@@ -8,8 +8,9 @@
     max-height: 50%;
     max-width: 50%;
     position: absolute;
-    left:50%;
+    left:20%;
     top: -30%;
+    z-index: 20;
 }
 
 .enemy {

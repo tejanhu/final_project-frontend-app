@@ -7,6 +7,7 @@ import World from "./world/World";
 import { SPRITE_SIZE } from '../../config/Constants';
 import Question from './question/Question';
 import BattleInfo from './question/BattleInfo';
+import maps from './data/maps';
 
 
 class Game extends Component {
@@ -21,12 +22,27 @@ class Game extends Component {
           currentHp: 10,
           maxHp: 10,
           currentLevel: 8,
-          loading: false
+          loading: false,
+          map: maps[0]
         };
     }
 
+    inBounds(position){
+        return (position[0] >= 0 && position[0] <=(520-SPRITE_SIZE)
+        && position[1] >= 0 && position[1] <= (260-SPRITE_SIZE))
+    }
+
     isValidPosition(position){
-        return (position[0] >= 0 && position[0] <=(520-SPRITE_SIZE)  && position[1] >= 0 && position[1] <= (260-SPRITE_SIZE));
+        if(!this.inBounds(position)){
+            return false
+        }
+
+        const tiles = this.state.map
+        const y = position[1] / SPRITE_SIZE
+        const x = position[0] / SPRITE_SIZE
+        const nextTile = tiles[y][x]
+
+        return (nextTile < 5)
     }
 
     handleMovement(direction){
@@ -114,6 +130,7 @@ class Game extends Component {
     }
 
     render() {
+        console.log("this.state.map is " + this.state.map)
         return (
             <div className="gameContainer">
                  <div class="gameBanner">
@@ -134,7 +151,7 @@ class Game extends Component {
                     {(this.state.onQuestion) ? 
                     <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
-                    <World position={this.state.position} />  }
+                    <World position={this.state.position} tiles={this.state.map}/>  }
                 </div>
             </div>
     );

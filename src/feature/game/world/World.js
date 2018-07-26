@@ -12,7 +12,7 @@ function World(props){
             padding: '0 auto',
         }}
         >
-            <Map />
+            <Map tiles={props.tiles}/>
             <Player position={props.position}/>
         </div>
 
