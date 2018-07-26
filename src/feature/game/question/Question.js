@@ -20,8 +20,18 @@ class Question extends Component {
                 <div className="jumbotronMain">
                     <div className={"jumbotronPlayerInfo"}></div>
                     <div className={"jumbotronEnemyInfo"}></div>
+                    <div className={"jumbotronQuestion"}></div>
                     <BattleInfo/>
-                    <div className={"storyText"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+                    <div className={"storyText"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.</div>
+                    <div className="question">
+                        <div id={"title"}>Question:<br/>What will add(5,2) output when ran? </div>
+                    </div>
+                    <div id={"answer1"} className={"question"}>6</div>
+                    <div id={"answer2"} className={"question"}>6</div>
+                    <div id={"answer3"} className={"question"}>6</div>
+                    <div id={"answer4"} className={"question"}>6</div>
                 </div>
             </div>
         )
