@@ -1,35 +1,9 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import ReactDOM from "react-dom";
-import Contact from "../Contact/contact";
-import About from "../About/about";
-import Lessons from "../Lessons/Lessons";
-import Books from "../Books/Books";
-import Glossary from "../Glossary/Glossary";
-
 
 
 class Footer extends Component{
-
-    handleContact(){
-        ReactDOM.render(<Contact/>, document.getElementById("body"));
-    }
-
-    handleAbout(){
-        ReactDOM.render(<About/>, document.getElementById("body"));
-    }
-
-    handleLessons() {
-        ReactDOM.render(<Lessons/>, document.getElementById("body"));
-    }
-
-    handleBooks() {
-        ReactDOM.render(<Books/>, document.getElementById("body"));
-    }
-
-    handleGlossary(){
-        ReactDOM.render(<Glossary/>, document.getElementById("body"));
-    }
 
 
     render(){
@@ -59,7 +33,7 @@ class Footer extends Component{
                             {/*<h5>Help</h5>*/}
                             <ul className="list-unstyled quick-links">
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>FAQs</a></li>
-                                <li><a onClick={this.handleContact}><i className="fa fa-angle-double-right"></i>Contact Us</a></li>
+                                <li><a onClick={() => this.props.handleClick("contact")}><i className="fa fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
