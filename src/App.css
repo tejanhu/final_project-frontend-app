@@ -107,3 +107,7 @@ section .section-title {
     margin-bottom: 10px;
   }
 }
+
+#aboutUsInfo{
+    align-content: center;
+}
