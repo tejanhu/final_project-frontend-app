@@ -3,7 +3,9 @@ import '../game.css';
 
 
 class PlayerInfo extends Component {
-    state = {loading: false};
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {
         // 测试 devServer 的代理功能
@@ -19,7 +21,7 @@ class PlayerInfo extends Component {
                     <div>Name: Player</div>
                     <div>HP: 10/10 | ATK: 5</div>
                     <div>Current level: 8</div>
-                    <div>To next level: 854/1000</div>
+                    <div>Score: {this.props.score}</div>
                 </div>
                 <img src={require("../../../resources/player.svg")} className="player"></img>
             </div>

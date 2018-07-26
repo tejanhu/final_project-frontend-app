@@ -2,12 +2,24 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../game.css';
 import Question from "../question/Question";
+import Arrow from "./Arrow";
+
+
 
 class Compass extends Component {
-    state = {loading: false};
+    constructor(props) {
+        super(props);
+    }
 
-    handleQuestion() {
-        ReactDOM.render(<Question/>, document.getElementById("body"));
+    // handleQuestion() {
+    //     ReactDOM.render(<Question/>, document.getElementById("body"));
+    // }
+
+    renderArrow(direction){
+        return <Arrow
+            direction={direction}
+            onClick={() => this.props.handleArrowPress(direction)}
+            />;
     }
 
     componentDidMount() {
@@ -20,10 +32,10 @@ class Compass extends Component {
     render() {
         return (
             <div>
-                <button className="buttonNorth" onClick={this.handleQuestion}>North</button>
-                <button className="buttonSouth" onClick={this.handleQuestion}>South</button>
-                <button className="buttonWest" onClick={this.handleQuestion}>West</button>
-                <button className="buttonEast" onClick={this.handleQuestion}>East</button>
+                {this.renderArrow("NORTH")}
+                {this.renderArrow("SOUTH")}
+                {this.renderArrow("WEST")}
+                {this.renderArrow("EAST")}
             </div>
         );
     }
