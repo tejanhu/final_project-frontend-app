@@ -39,6 +39,8 @@ class Navbar extends Component{
                                 <a className="dropdown-item" onClick={this.handleLessons}>Lessons</a>
                                 <a className="dropdown-item" onClick={this.handleBooks}>Books</a>
                                 <a className="dropdown-item" onClick={() => this.props.handleClick("glossary")}>Glossary</a>
+                                <a className="dropdown-item" onClick={() => this.props.handleClick("books")}>Books</a>
+                                <a className="dropdown-item" onClick={this.handleGlossary}>Glossary</a>
                             </div>
                         </li>
                         <li className="nav-item">
