@@ -1,36 +1,11 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import ReactDOM from "react-dom";
-import Contact from "../Contact/contact";
-import About from "../About/about";
-import Lessons from "../Lessons/Lessons";
-import Books from "../Books/Books";
-import Glossary from "../Glossary/Glossary";
+
 
 
 
 class Footer extends Component{
-
-    handleContact(){
-        ReactDOM.render(<Contact/>, document.getElementById("body"));
-    }
-
-    handleAbout(){
-        ReactDOM.render(<About/>, document.getElementById("body"));
-    }
-
-    handleLessons() {
-        ReactDOM.render(<Lessons/>, document.getElementById("body"));
-    }
-
-    handleBooks() {
-        ReactDOM.render(<Books/>, document.getElementById("body"));
-    }
-
-    handleGlossary(){
-        ReactDOM.render(<Glossary/>, document.getElementById("body"));
-    }
-
 
     render(){
         return(
@@ -42,7 +17,7 @@ class Footer extends Component{
                             <ul className="list-unstyled quick-links">
                                 <li><a onClick={this.handleGlossary}><i className="fa fa-angle-double-right"></i>Glossary</a></li>
                                 <li><a onClick={this.handleAbout}><i className="fa fa-angle-double-right"></i>About Us</a></li>
-                                <li><a onClick={this.handleLessons}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
+                                <li><a onClick={() => this.props.handleClick("lessons")}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                                 <li><a onClick={this.handleBooks}><i className="fa fa-angle-double-right"></i>Books</a></li>
                             </ul>
                         </div>
