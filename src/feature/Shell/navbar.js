@@ -56,10 +56,8 @@ class Navbar extends Component{
                                 Learn
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a className="dropdown-item" href="#">Glossary</a>
                                 <a className="dropdown-item" onClick={this.handleBooks}>Books</a>
                                 <a className="dropdown-item" onClick={this.handleGlossary}>Glossary</a>
-                                <a className="dropdown-item" href="#">Books</a>
                                 <a className="dropdown-item" href="#">Lessons</a>
                             </div>
                         </li>
