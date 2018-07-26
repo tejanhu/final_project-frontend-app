@@ -111,3 +111,7 @@ section .section-title {
 #aboutUsInfo{
     align-content: center;
 }
+
+#searchFunction{
+    float:right !important;
+}
