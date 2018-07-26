@@ -3,7 +3,6 @@ import Navbar from "./feature/Shell/navbar.js";
 import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
-import Lessons from "./feature/Lessons/Lessons";
 import About from "./feature/About/about";
 import Contact from "./feature/Contact/contact";
 import Glossary from "./feature/Glossary/Glossary";
