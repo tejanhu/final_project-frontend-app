@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../game.css';
+import './playerInfo.css';
 
 
 class PlayerInfo extends Component {
@@ -17,13 +17,13 @@ class PlayerInfo extends Component {
     render() {
         return (
             <div>
-                <div className={"playerInfo"}>
+                <div className={"playerStats"}>
                     <div>Name: Player</div>
                     <div>HP: 10/10 | ATK: 5</div>
                     <div>Current level: 8</div>
                     <div>Score: {this.props.score}</div>
                 </div>
-                <img src={require("../../../resources/player.svg")} className="player"></img>
+                <img src={require("../../../resources/player.svg")} className="playerAvatar"></img>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './arrow.css';
 
 function Arrow(props) {
     return (

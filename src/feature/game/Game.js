@@ -25,6 +25,9 @@ class Game extends Component {
         };
     }
 
+    isValidPosition(position){
+        return (position[0] >= 0 && position[0] <=(520-SPRITE_SIZE)  && position[1] >= 0 && position[1] <= (260-SPRITE_SIZE));
+    }
 
     handleMovement(direction){
         const oldPos = this.state.position;
@@ -46,7 +49,7 @@ class Game extends Component {
             default:
                 newPosition =  oldPos    
         }
-        if(isValidPosition(newPosition)){
+        if(this.isValidPosition(newPosition)){
             return newPosition
         }else{
             return oldPos
@@ -74,11 +77,10 @@ class Game extends Component {
         console.log("newPosition: " + this.state.position);
 
         const randomSeed = Math.random();
-        if(randomSeed < 0){
+        if(randomSeed < 0.2){
             this.getQuestion();
         }
         
-
     }
 
     handleAnswer(answer){
@@ -116,16 +118,17 @@ class Game extends Component {
             <div className="gameContainer">
                  <div class="gameBanner">
                       <Difficulty />
+                      
                 </div>
-                <div class="playerInfo">
+                <div className="playerInfo">
+                    <PlayerInfo score={this.state.score}/>
+                </div>
+                <div className="sideDisplay">
                     {(this.state.onQuestion) ?
                     <BattleInfo />
                     :
                     <Compass handleArrowPress={(direction) => this.handleArrowPress(direction)}/>
-                    }  
-                </div>
-                <div className="sideDisplay">
-                   <PlayerInfo score={this.state.score}/>
+                    } 
                 </div>
                 <div className="mainDisplay" >
                     {(this.state.onQuestion) ? 
@@ -134,36 +137,8 @@ class Game extends Component {
                     <World position={this.state.position} />  }
                 </div>
             </div>
-            // <div className="gameContainer">
-            //     <div class="gameBanner">
-            //     <Difficulty />
-            //     </div>
-            //     <div class="playerInfo">
-            //     <PlayerInfo score={this.state.score}/>
-            //     </div>
-            //     <div className="sideDisplay">
-                    // {(this.state.onQuestion) ?
-                    // <BattleInfo />
-                    // :
-                    // <Compass handleArrowPress={(direction) => this.handleArrowPress(direction)}/>
-                    // }  
-
-            //     </div>
-            //     <div>
-            //         <div id="display" className="display" >
-                        // {(this.state.onQuestion) ? 
-                        // <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
-                        // :
-                        //  <World position={this.state.position} />  }
-            //         </div>
-            //     </div>
-            // </div>
     );
     }
 }
 
 export default Game;
-
-function isValidPosition(position){
-    return (position[0] >= 0 && position[0] <=(800-SPRITE_SIZE)  && position[1] >= 0 && position[1] <= (400-SPRITE_SIZE));
-}
