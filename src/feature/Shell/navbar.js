@@ -38,6 +38,8 @@ class Navbar extends Component{
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" onClick={() => this.props.handleClick("lessons")}>Lessons</a>
                                 <a className="dropdown-item" onClick={this.handleBooks}>Books</a>
+                                <a className="dropdown-item" onClick={this.handleLessons}>Lessons</a>
+                                <a className="dropdown-item" onClick={() => this.props.handleClick("books")}>Books</a>
                                 <a className="dropdown-item" onClick={this.handleGlossary}>Glossary</a>
                             </div>
                         </li>

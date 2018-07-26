@@ -5,6 +5,7 @@ import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
 import Lessons from "./feature/Lessons/Lessons";
+import Books from "./feature/Books/Books";
 
 class App extends Component {
     constructor(props) {
@@ -22,6 +23,8 @@ class App extends Component {
               return <Game />
           case "lessons":
               return <Lessons />
+          case "books":
+              return <Books />
           default:
               return <Home />
       }  
