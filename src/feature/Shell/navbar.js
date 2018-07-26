@@ -26,7 +26,7 @@ class Navbar extends Component{
                             <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" onClick={this.handleAbout}>About</a>
-                                <a className="dropdown-item" onClick={this.handleContact}>Contact</a>
+                                <a className="dropdown-item" onClick={() => this.props.handleClick("contact")}>Contact</a>
                             </div>
                         </li>
                         <li className="nav-item dropdown">

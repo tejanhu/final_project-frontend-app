@@ -3,6 +3,7 @@ import Navbar from "./feature/Shell/navbar.js";
 import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
+import Contact from "./feature/Contact/contact";
 import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
 
@@ -20,6 +21,8 @@ class App extends Component {
               return <Home handleClick={(newPage) => this.handleClick(newPage)}/>
           case "game":
               return <Game />
+          case "contact":
+              return <Contact />
           case "glossary":
               return <Glossary />
           case "books":
