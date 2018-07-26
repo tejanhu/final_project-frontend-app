@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import '../game.css';
 
 
-class Layout extends Component {
+class EnemyInfo extends Component {
     state = {loading: false};
 
     componentDidMount() {
@@ -16,15 +15,15 @@ class Layout extends Component {
     render() {
         return (
             <div>
-                <h4>Difficulty selection:</h4>
-                <button>Easy</button>
-                <button>Medium</button>
-                <button>Hard</button>
-                <div className="jumbotronMain"></div>
-                <div className={"jumbotronPlayerInfo"}></div>
+                <div className={"enemyInfo"}>
+                    <div>Name: Enemy</div>
+                    <div>HP: 5/5 | ATK: 2</div>
+                    <div>Level: 3</div>
+                </div>
+                <img src={require("../../../resources/enemy.png")} className="enemy"></img>
             </div>
         );
     }
 }
 
-export default Layout;
+export default EnemyInfo;

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import Contact from "../Contact/contact";
 import ReactDOM from 'react-dom';
-import Home from './feature/homepage/Home';
+import Home from '../homepage/Home';
 
 
 class Navbar extends Component{
-
 
     handleHome(){
         ReactDOM.render(<Home/>, document.getElementById("body"));
     }
 
+    handleContact(){
+        ReactDOM.render(<Contact/>, document.getElementById("body"));
+    }
 
     render(){
         return(
@@ -28,7 +31,7 @@ class Navbar extends Component{
                             <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" href="#">About</a>
-                                <a className="dropdown-item" href="#">Contact</a>
+                                <a className="dropdown-item" onClick={this.handleContact}>Contact</a>
                             </div>
                         </li>
                         <li className="nav-item dropdown">

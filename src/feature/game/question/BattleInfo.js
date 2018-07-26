@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import '../game.css';
+import PlayerInfo from "../navigation/PlayerInfo";
+import EnemyInfo from "./EnemyInfo";
 
 
-class PlayerInfo extends Component {
+class BattleInfo extends Component {
     state = {loading: false};
 
     componentDidMount() {
@@ -15,16 +17,14 @@ class PlayerInfo extends Component {
     render() {
         return (
             <div>
-                <div className={"playerInfo"}>
-                    <div>Name: Player</div>
-                    <div>HP: 10/10 | ATK: 5</div>
-                    <div>Current level: 8</div>
-                    <div>To next level: 854/1000</div>
+                <div className={"battleInfo"}>
+                    <div><PlayerInfo/></div>
+                    <div><img src={require("../../../resources/versus.png")} className={"versus"}></img></div>
+                    <div><EnemyInfo/></div>
                 </div>
-                <img src={require("../../../resources/player.svg")} className="player"></img>
             </div>
         );
     }
 }
 
-export default PlayerInfo;
+export default BattleInfo;
