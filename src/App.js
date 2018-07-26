@@ -4,6 +4,8 @@ import Body from "./body.js";
 import Footer from "./feature/Shell/footer.js";
 import Home from "./feature/homepage/Home";
 import Game from "./feature/game/Game";
+import About from "./feature/About/about";
+
 
 class App extends Component {
     constructor(props) {
@@ -19,6 +21,8 @@ class App extends Component {
               return <Home handleClick={(newPage) => this.handleClick(newPage)}/>
           case "game":
               return <Game />
+          case "about":
+              return <About />
           default:
               return <Home />
       }  
