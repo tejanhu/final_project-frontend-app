@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import '../../App.css';
 import ReactDOM from "react-dom";
 import Contact from "../Contact/contact";
+import About from "../About/about";
 
 
 class Footer extends Component{
 
     handleContact(){
         ReactDOM.render(<Contact/>, document.getElementById("body"));
+    }
+    handleAbout(){
+        ReactDOM.render(<About/>, document.getElementById("body"));
     }
 
 
@@ -19,10 +23,8 @@ class Footer extends Component{
                         <div className="col-xs-12 col-sm-4 col-md-4">
                             {/*<h5>Quick links</h5>*/}
                             <ul className="list-unstyled quick-links">
-                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>*/}
-                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>*/}
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>About Us</a></li>
+                                <li><a onClick={this.handleAbout}><i className="fa fa-angle-double-right"></i>About Us</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Books</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                             </ul>
@@ -34,7 +36,6 @@ class Footer extends Component{
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Privacy</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>
-                                {/*<li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>*/}
                             </ul>
                         </div>
                         <div className="col-xs-12 col-sm-4 col-md-4">
