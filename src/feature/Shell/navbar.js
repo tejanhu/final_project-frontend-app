@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import Contact from "../Contact/contact";
-import About from "../About/about";
 import ReactDOM from 'react-dom';
-import Home from '../homepage/Home';
-import Lessons from "../Lessons/Lessons";
-import Books from "../Books/Books";
-import Glossary from "../Glossary/Glossary";
+
 
 
 class Navbar extends Component{
@@ -42,7 +37,7 @@ class Navbar extends Component{
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" onClick={this.handleLessons}>Lessons</a>
-                                <a className="dropdown-item" onClick={this.handleBooks}>Books</a>
+                                <a className="dropdown-item" onClick={() => this.props.handleClick("books")}>Books</a>
                                 <a className="dropdown-item" onClick={this.handleGlossary}>Glossary</a>
                             </div>
                         </li>
