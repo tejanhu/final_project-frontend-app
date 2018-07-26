@@ -3,6 +3,7 @@ import Contact from "../Contact/contact";
 import About from "../About/about";
 import ReactDOM from 'react-dom';
 import Home from '../homepage/Home';
+import Glossary from "../Glossary/Glossary";
 
 
 class Navbar extends Component{
@@ -17,6 +18,10 @@ class Navbar extends Component{
 
     handleAbout(){
         ReactDOM.render(<About/>, document.getElementById("body"));
+    }
+
+    handleGlossary(){
+        ReactDOM.render(<Glossary/>, document.getElementById("body"));
     }
 
     render(){
@@ -46,7 +51,7 @@ class Navbar extends Component{
                                 Learn
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a className="dropdown-item" href="#">Glossary</a>
+                                <a className="dropdown-item" onClick={this.handleGlossary}>Glossary</a>
                                 <a className="dropdown-item" href="#">Books</a>
                                 <a className="dropdown-item" href="#">Lessons</a>
                             </div>
