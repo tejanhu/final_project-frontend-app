@@ -3,6 +3,7 @@ import '../../App.css';
 import ReactDOM from "react-dom";
 import Contact from "../Contact/contact";
 import About from "../About/about";
+import Books from "../Books/Books";
 
 
 class Footer extends Component{
@@ -10,8 +11,13 @@ class Footer extends Component{
     handleContact(){
         ReactDOM.render(<Contact/>, document.getElementById("body"));
     }
+
     handleAbout(){
         ReactDOM.render(<About/>, document.getElementById("body"));
+    }
+
+    handleBooks(){
+        ReactDOM.render(<Books/>, document.getElementById("body"));
     }
 
 
@@ -25,7 +31,7 @@ class Footer extends Component{
                             <ul className="list-unstyled quick-links">
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Glossary</a></li>
                                 <li><a onClick={this.handleAbout}><i className="fa fa-angle-double-right"></i>About Us</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Books</a></li>
+                                <li><a onClick={this.handleBooks}><i className="fa fa-angle-double-right"></i>Books</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                             </ul>
                         </div>
