@@ -1,0 +1,13 @@
+.carousel img {
+    object-fit: cover;
+}
+
+.carousel-item div {
+    overflow: hidden;
+}
+
+.carousel-inner > .carousel-item > img {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+}
