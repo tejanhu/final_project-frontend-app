@@ -6,12 +6,13 @@ function World(props){
     return(
         <div
         style={{
+            height: '240px',
+            width: '520px',
             backgroundColor:"#78AB46",
-            height: '100%',
-            width: '100%,'
+            padding: '0 auto',
         }}
         >
-            <Map />
+            <Map tiles={props.tiles}/>
             <Player position={props.position}/>
         </div>
 

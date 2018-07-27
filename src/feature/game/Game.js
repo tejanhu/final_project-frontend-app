@@ -7,13 +7,14 @@ import World from "./world/World";
 import { SPRITE_SIZE } from '../../config/Constants';
 import Question from './question/Question';
 import BattleInfo from './question/BattleInfo';
+import maps from './data/maps';
 
 
 class Game extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          position: [12,5],
+          position: [0,0],
           onQuestion: false,
           questions: [],
           score: 0,
@@ -21,25 +22,54 @@ class Game extends Component {
           currentHp: 10,
           maxHp: 10,
           currentLevel: 8,
-          loading: false
+          loading: false,
+          map: maps[0]
         };
+    }
+
+    inBounds(position){
+        return (position[0] >= 0 && position[0] <=(520-SPRITE_SIZE)
+        && position[1] >= 0 && position[1] <= (260-SPRITE_SIZE))
+    }
+
+    isValidPosition(position){
+        if(!this.inBounds(position)){
+            return false
+        }
+
+        const tiles = this.state.map
+        const y = position[1] / SPRITE_SIZE
+        const x = position[0] / SPRITE_SIZE
+        const nextTile = tiles[y][x]
+
+        return (nextTile < 5)
     }
 
     handleMovement(direction){
         const oldPos = this.state.position;
+        let newPosition;
         console.log("in handle movement oldPos is: " + oldPos);
         switch(direction){
             case 'WEST':
-                return [oldPos[0]-SPRITE_SIZE, oldPos[1]]
+                newPosition =  [oldPos[0]-SPRITE_SIZE, oldPos[1]];
+                break;
             case 'EAST':
-                return [oldPos[0]+SPRITE_SIZE, oldPos[1]]
+                newPosition =  [oldPos[0]+SPRITE_SIZE, oldPos[1]];
+                break;
             case 'NORTH':
-                return [oldPos[0], oldPos[1]-SPRITE_SIZE]
+                newPosition =  [oldPos[0], oldPos[1]-SPRITE_SIZE];
+                break;
             case 'SOUTH':
-                return [oldPos[0], oldPos[1]+SPRITE_SIZE]
+                newPosition =  [oldPos[0], oldPos[1]+SPRITE_SIZE];
+                break;
             default:
-                return oldPos    
+                newPosition =  oldPos    
         }
+        if(this.isValidPosition(newPosition)){
+            return newPosition
+        }else{
+            return oldPos
+        } 
     }
 
     getNewPosition(direction){
@@ -67,7 +97,6 @@ class Game extends Component {
             this.getQuestion();
         }
         
-
     }
 
     handleAnswer(answer){
@@ -85,10 +114,7 @@ class Game extends Component {
     }
 
     componentDidMount() {
-        // 测试 devServer 的代理功能
-        // fetch('/api/category')
-        //     .then(resp => resp.json())
-        //     .then(res => console.log('here here', res));
+      
         this.setState({
             questions: [
                 {description: "What will add(5,2) output when ran?",
@@ -97,35 +123,35 @@ class Game extends Component {
                     {answerValue:"1", answerBoolean: false},
                     {answerValue:"5", answerBoolean: false},
                     {answerValue:"4", answerBoolean: false},
-                ]
-
-            
+                ]       
         }
         ]
         })
     }
 
     render() {
+        console.log("this.state.map is " + this.state.map)
         return (
-            <div>
-                <Difficulty/>
-                <div className="jumbotronMain">
-                    <div className={"jumbotronPlayerInfo"}></div>
+            <div className="gameContainer">
+                 <div class="gameBanner">
+                      <Difficulty />
+                      
+                </div>
+                <div className="playerInfo">
                     <PlayerInfo score={this.state.score}/>
-                    <div className="sideDisplay">
-                         {(this.state.onQuestion) ?
-                            <BattleInfo />
-                            :
-                            <Compass handleArrowPress={(direction) => this.handleArrowPress(direction)}/>
-                         }  
-
-                    </div>
-                    <div id="display" className="display" >
-                        {(this.state.onQuestion) ? 
-                        <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
-                        :
-                         <World position={this.state.position} />  }
-                    </div>
+                </div>
+                <div className="sideDisplay">
+                    {(this.state.onQuestion) ?
+                    <BattleInfo />
+                    :
+                    <Compass handleArrowPress={(direction) => this.handleArrowPress(direction)}/>
+                    } 
+                </div>
+                <div className="mainDisplay" >
+                    {(this.state.onQuestion) ? 
+                    <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
+                    :
+                    <World position={this.state.position} tiles={this.state.map}/>  }
                 </div>
             </div>
     );

@@ -1,0 +1,17 @@
+.playerStats {
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 90%;
+    left: 50%;
+    top: 5%;
+}
+
+.playerAvatar{
+    position: absolute;
+    left: 1.5%;
+    top: 6%;
+    width: 30%;
+    height: 80%;
+}

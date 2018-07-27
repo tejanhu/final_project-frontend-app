@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../game.css';
+import './battleInfo.css';
 import PlayerInfo from "../navigation/PlayerInfo";
 import EnemyInfo from "./EnemyInfo";
 
@@ -16,13 +16,10 @@ class BattleInfo extends Component {
 
     render() {
         return (
-            <div>
                 <div className={"battleInfo"}>
-                    <div><PlayerInfo/></div>
                     <div><img src={require("../../../resources/versus.png")} className={"versus"}></img></div>
                     <div><EnemyInfo/></div>
                 </div>
-            </div>
         );
     }
 }
