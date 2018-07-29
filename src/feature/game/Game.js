@@ -133,7 +133,7 @@ class Game extends Component {
         console.log("this.state.map is " + this.state.map)
         return (
             <div className="gameContainer">
-                 <div class="gameBanner">
+                 <div className="gameBanner">
                       <Difficulty />
                       
                 </div>
