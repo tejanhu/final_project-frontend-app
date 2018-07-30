@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "rc-progress": "^2.2.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-image-carousel": "^2.0.18",
+    "react-progressbar.js": "^0.2.0",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.4.0"
   },
