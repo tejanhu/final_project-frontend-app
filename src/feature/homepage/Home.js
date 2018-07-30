@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import Banner from './banner/Banner';
+import Carousel from './carousel/carousel';
+import Info from './info/Info';
 
 
 class Home extends Component {
@@ -8,7 +8,8 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Banner handleClick={this.props.handleClick}/>
+                <Carousel handleClick={this.props.handleClick}/>
+                <Info />
             </div>
         );
     }
