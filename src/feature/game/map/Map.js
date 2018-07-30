@@ -6,6 +6,8 @@ function getTileSprite(type){
     switch(type){
         case 0:
             return 'grass'
+        case 1:
+            return 'chest'
         case 5:
             return 'rock'
         case 6:
@@ -40,7 +42,7 @@ function Map(props){
                 position: 'relative',
                 width: '520px',
                 height:'240px',
-                backgroundColor: 'green',
+                backgroundColor: '#78AB46',
             }}
         >
         {props.tiles.map( row => <MapRow tiles={row} />)}

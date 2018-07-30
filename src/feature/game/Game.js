@@ -4,17 +4,17 @@ import PlayerInfo from './navigation/PlayerInfo';
 import Compass from "./navigation/Compass";
 import Difficulty from "./Difficulty";
 import World from "./world/World";
-import { SPRITE_SIZE } from '../../config/Constants';
+import { SPRITE_SIZE, MAP_HEIGHT, MAP_WIDTH, TILES_WIDE_COUNT, TILES_HIGH_COUNT, MAP_LIST_HEIGHT, MAP_LIST_WIDTH } from '../../config/Constants';
 import Question from './question/Question';
 import BattleInfo from './question/BattleInfo';
-import maps from './data/maps';
+import mapList from './data/mapList';
 
 
 class Game extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          position: [0,0],
+          position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
           onQuestion: false,
           questions: [],
           score: 0,
@@ -23,7 +23,7 @@ class Game extends Component {
           maxHp: 10,
           currentLevel: 8,
           loading: false,
-          map: maps[0]
+          mapCOORD: [1,1]
         };
     }
 
@@ -37,12 +37,58 @@ class Game extends Component {
             return false
         }
 
-        const tiles = this.state.map
+        const tiles = mapList[this.state.mapCOORD[0]][this.state.mapCOORD[1]]
         const y = position[1] / SPRITE_SIZE
         const x = position[0] / SPRITE_SIZE
         const nextTile = tiles[y][x]
 
         return (nextTile < 5)
+    }
+
+    isValidMap(mapCOORD){
+        console.log("checking if new map is valid")
+        return (mapCOORD[0] >= 0 && mapCOORD[0] < MAP_LIST_HEIGHT && mapCOORD[1] >= 0 && mapCOORD[1] < MAP_LIST_WIDTH);
+    }
+
+    handleMapChange(position, direction){
+        const oldPos = position;
+        const oldMapCOORD = this.state.mapCOORD;
+        let newPosition;
+        let newMapCOORD;
+
+        switch(direction){
+            case 'WEST':
+                newMapCOORD = [oldMapCOORD[0], oldMapCOORD[1]-1]
+                newPosition =  [MAP_WIDTH - SPRITE_SIZE, oldPos[1]]
+                break;
+            case 'EAST':
+                newMapCOORD = [oldMapCOORD[0], oldMapCOORD[1]+1]
+                newPosition =  [0, oldPos[1]];
+                break;
+            case 'NORTH':
+                newMapCOORD = [oldMapCOORD[0]-1, oldMapCOORD[1]]
+                newPosition =  [oldPos[0], MAP_HEIGHT-SPRITE_SIZE];
+                break;
+            case 'SOUTH':
+                newMapCOORD = [oldMapCOORD[0]+1, oldMapCOORD[1]]
+                newPosition =  [oldPos[0], 0];
+                break;
+            default:
+                newPosition =  oldPos    
+        }
+
+        if(this.isValidMap(newMapCOORD)){
+            console.log("changing new position to" + newPosition);
+            this.setState({
+                    positiion: newPosition,
+            })
+            this.setState({
+                    mapCOORD: newMapCOORD
+            })
+             return newPosition
+        }
+           
+            return oldPos;
     }
 
     handleMovement(direction){
@@ -62,9 +108,12 @@ class Game extends Component {
             case 'SOUTH':
                 newPosition =  [oldPos[0], oldPos[1]+SPRITE_SIZE];
                 break;
-            default:
-                newPosition =  oldPos    
         }
+
+        if(!this.inBounds(newPosition)){
+            return newPosition = this.handleMapChange(oldPos, direction);
+        }
+
         if(this.isValidPosition(newPosition)){
             return newPosition
         }else{
@@ -93,7 +142,7 @@ class Game extends Component {
         console.log("newPosition: " + this.state.position);
 
         const randomSeed = Math.random();
-        if(randomSeed < 0.2){
+        if(randomSeed < 0.05){
             this.getQuestion();
         }
         
@@ -127,10 +176,14 @@ class Game extends Component {
         }
         ]
         })
+
     }
 
     render() {
-        console.log("this.state.map is " + this.state.map)
+        console.log("this.state.mapCoord is " + this.state.mapCOORD);
+        let map = mapList[this.state.mapCOORD[0]][this.state.mapCOORD[1]];
+        console.log("player position is :" + this.state.position);
+        console.log("map is : " + map);
         return (
             <div className="gameContainer">
                  <div className="gameBanner">
@@ -151,7 +204,7 @@ class Game extends Component {
                     {(this.state.onQuestion) ? 
                     <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
-                    <World position={this.state.position} tiles={this.state.map}/>  }
+                    <World position={this.state.position} tiles={map}/>  }
                 </div>
             </div>
     );
