@@ -41,10 +41,10 @@ class Navbar extends Component{
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Sign Up</a>
+                            <a className="nav-link" onClick={() => this.props.handleClick("signup")}>Sign Up</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Login</a>
+                            <a className="nav-link" onClick={() => this.props.handleClick("login")}>Login</a>
                         </li>
                     </ul>
                 </div>
