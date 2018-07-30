@@ -10,23 +10,11 @@ class Compass extends Component {
     constructor(props) {
         super(props);
     }
-
-    // handleQuestion() {
-    //     ReactDOM.render(<Question/>, document.getElementById("body"));
-    // }
-
     renderArrow(direction){
         return <Arrow
             direction={direction}
             onClick={() => this.props.handleArrowPress(direction)}
             />;
-    }
-
-    componentDidMount() {
-        // 测试 devServer 的代理功能
-        // fetch('/api/category')
-        //     .then(resp => resp.json())
-        //     .then(res => console.log('here here', res));
     }
 
     render() {

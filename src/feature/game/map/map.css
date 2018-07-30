@@ -1,0 +1,22 @@
+.tileRow{
+    max-height: 40px;
+}
+
+.tile {
+    display: inline-flex;
+}
+
+.chest{
+    background-image: url('/tiles/chest.png')
+}
+.grass{
+    background-color: #78AB46;
+}
+
+.rock {
+    background-image: url('/tiles/rock.png')
+}
+
+.tree{
+    background-image: url('/tiles/tree.png')
+}

@@ -34,16 +34,6 @@ class Books extends Component{
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
         );
     }
 }
