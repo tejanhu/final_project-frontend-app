@@ -24,7 +24,7 @@ class App extends Component {
           case "home":
               return <Home handleClick={(newPage) => this.handleClick(newPage)}/>
           case "game":
-              return <Game />
+              return <Game  />
           case "about":
               return <About />
           case "contact":
