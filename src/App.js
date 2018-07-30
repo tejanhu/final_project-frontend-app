@@ -10,6 +10,7 @@ import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
 import Login from "./feature/Login/login";
 import Signup from "./feature/Signup/signup";
+import LeaderBoard from "./feature/LeaderBoard/leaderboard"
 
 class App extends Component {
     constructor(props) {
@@ -39,6 +40,8 @@ class App extends Component {
               return <Login/>
           case "signup":
               return <Signup/>
+          case "leaderboard":
+              return<LeaderBoard />
           default:
               return <Home />
       }  
