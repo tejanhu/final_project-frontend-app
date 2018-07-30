@@ -22,16 +22,7 @@ class Books extends Component{
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
-
-
-
-
-
-
 
         );
     }
