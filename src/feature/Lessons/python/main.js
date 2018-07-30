@@ -7,7 +7,7 @@ import '../lessons.css';
 
 class MainPython extends Component {
     itemStyle = {
-        backgroundColor: '#00cbef',
+        backgroundColor: '#0654d1',
         color: 'white',
         fontWeight: 'bold'
     };
