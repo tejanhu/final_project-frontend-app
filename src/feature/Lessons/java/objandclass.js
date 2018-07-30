@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class ObjAndClass extends Component {
     render () {
         return (

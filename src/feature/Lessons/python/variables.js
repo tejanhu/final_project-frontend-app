@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Variables extends Component {
     render () {
         return (
