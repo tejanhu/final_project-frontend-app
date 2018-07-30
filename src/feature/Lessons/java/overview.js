@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {JAVA_OVERVIEW} from '../../../config/Constants';
 
 
 class Overview extends Component {
@@ -6,7 +7,7 @@ class Overview extends Component {
         return (
             <div id="overview" className="panel-collapse collapse in">
                 <div className="panel-body">
-                    OVERVIEW
+                    {JAVA_OVERVIEW}
                 </div>
             </div>
         );
