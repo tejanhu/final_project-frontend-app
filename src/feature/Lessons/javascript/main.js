@@ -6,7 +6,7 @@ import Introduction from "./introduction";
 import '../lessons.css';
 
 class MainJavascript extends Component {
-    divStyle = {
+    itemStyle = {
         backgroundColor: '#00cbef',
         color: 'white',
         fontWeight: 'bold'
@@ -17,16 +17,16 @@ class MainJavascript extends Component {
             <div className="panel-body">
                 <ul className="list-group">
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#introductionjs">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Introduction</li>
+                        <li style={this.itemStyle} className="list-group-item">Introduction</li>
                     </a><Introduction />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#syntaxjs">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Syntax</li>
+                        <li style={this.itemStyle} className="list-group-item">Syntax</li>
                     </a><Syntax />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#statementsjs">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Statements</li>
+                        <li style={this.itemStyle} className="list-group-item">Statements</li>
                     </a><Statements />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#operatorsjs">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Operators</li>
+                        <li style={this.itemStyle} className="list-group-item">Operators</li>
                     </a><Operators />
                 </ul>
             </div>

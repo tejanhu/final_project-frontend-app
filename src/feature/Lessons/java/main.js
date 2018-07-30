@@ -6,7 +6,7 @@ import ObjAndClass from "./objandclass";
 import '../lessons.css';
 
 class MainJava extends Component {
-    divStyle = {
+    itemStyle = {
         backgroundColor: '#00cbef',
         color: 'white',
         fontWeight: 'bold'
@@ -17,16 +17,16 @@ class MainJava extends Component {
             <div className="panel-body">
                 <ul className="list-group">
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#overview">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Overview</li>
+                        <li style={this.itemStyle} className="list-group-item">Overview</li>
                     </a><Overview />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#setup">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Set up</li>
+                        <li style={this.itemStyle} className="list-group-item">Set up</li>
                     </a><Setup />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#syntax">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Basic Syntax</li>
+                        <li style={this.itemStyle} className="list-group-item">Basic Syntax</li>
                     </a><Syntax />
                     <a className="link" data-toggle="collapse" data-parent="#collapse1" href="#objandclass">
-                        <li style={this.divStyle} className="expanded-option list-group-item">Objects & Classes</li>
+                        <li style={this.itemStyle} className="list-group-item">Objects & Classes</li>
                     </a><ObjAndClass />
                 </ul>
             </div>
