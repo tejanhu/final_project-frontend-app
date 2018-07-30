@@ -6,9 +6,11 @@
     display: inline-flex;
 }
 
-
+.chest{
+    background-image: url('/tiles/chest.png')
+}
 .grass{
-    background-color: green;
+    background-color: #78AB46;
 }
 
 .rock {
