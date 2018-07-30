@@ -112,6 +112,7 @@ section .section-title {
     align-content: center;
 }
 
+
 #searchFunction{
-    float:right !important;
+  float:right !important;
 }
