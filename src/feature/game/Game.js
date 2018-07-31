@@ -53,7 +53,9 @@ class Game extends Component {
             loading: false,
             mapCOORD: [1,1],
             correctVisible: false,
-            wrongVisible: false
+            wrongVisible: false,
+            spriteLocation: '0px 0px',
+            walkIndex: 0,           
         };
     }
 
@@ -171,7 +173,7 @@ class Game extends Component {
                     {(this.state.onQuestion) ? 
                     <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
-                    <World position={this.state.position} tiles={map}/>  }
+                    <World position={this.state.position} spriteLocation={this.state.spriteLocation} tiles={map}/>  }
                 </div>
                 <div>
                     <div id={"correctAnswer"} className={`alert alert-success ${this.state.correctVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Correct! Well done!</strong> You win the battle!</div>

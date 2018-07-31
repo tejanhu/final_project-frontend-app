@@ -14,7 +14,7 @@ function World(props){
         }}
         >
             <Map tiles={props.tiles}/>
-            <Player position={props.position}/>
+            <Player position={props.position} spriteLocation={props.spriteLocation}/>
         </div>
 
     )
