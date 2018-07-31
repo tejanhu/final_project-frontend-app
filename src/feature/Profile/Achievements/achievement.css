@@ -1,0 +1,41 @@
+.achievement {
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    top: 52%;
+    border: inset;
+}
+
+#achievement1.achievement {
+    left: 5%;
+}
+
+#achievement2.achievement {
+    left: 15%;
+}
+
+#achievement3.achievement {
+    left: 25%;
+}
+
+#achievement4.achievement {
+    left: 35%;
+}
+
+#achievement5.achievement {
+    left: 45%;
+}
+
+#achievement6.achievement {
+    left: 55%;
+}
+
+.achievementTitle {
+    position: absolute;
+    left: 7%;
+    top: 45%;
+}
+
+#moreachieve.achievement {
+    left: 65%;
+}
