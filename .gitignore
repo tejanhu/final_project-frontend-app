@@ -8,6 +8,7 @@
 
 # production
 /build
+.idea
 
 .idea/
 *.iml
@@ -25,4 +26,5 @@ yarn-error.log*
 .idea/
 
 package-lock.json
+*.iml
 
