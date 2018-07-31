@@ -60,13 +60,16 @@ class Glossary extends Component{
 
 
                             <div className="col-sm-12 col-lg-12">
-                            <ul>
-                            {this.state.words.map(word => (
-                                <li key={word.keyword}>
-                                {word.keyword} {word.definition}
-                                </li>
-                            ))}
-                            </ul>
+                                <table className="table table-striped">
+                                    <th>Term</th>
+                                    <th>Definition</th>
+                                {this.state.words.map(word => (
+                                    <tr key={word.keyword}>
+                                        <td>{word.keyword}</td>
+                                        <td>{word.definition}</td>
+                                    </tr>
+                                ))}
+                                </table>
                             </div>
                             <div class="col-sm-4">
                                 <span class="glyphicon glyphicon-signal logo"></span>

@@ -59,13 +59,16 @@ class Books extends Component{
 
 
                             <div className="col-sm-12 col-lg-12">
-                            <ul>
-                            {this.state.books.map(book => (
-                                <li key={book.name}>
-                                {book.name} {book.author}
-                                </li>
-                            ))}
-                            </ul>
+                            <table className="table table-striped">
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                {this.state.books.map(book => (
+                                    <tr key={book.name}>
+                                        <td>{book.name}</td>
+                                        <td>{book.author}</td>
+                                    </tr>
+                                ))}
+                                </table>
                             </div>
                             <div class="col-sm-4">
                                 <span class="glyphicon glyphicon-signal logo"></span>
