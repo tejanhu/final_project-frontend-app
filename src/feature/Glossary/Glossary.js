@@ -3,10 +3,48 @@ import ReactDOM from 'react-dom';
 
 class Glossary extends Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+          error: null,
+          isLoaded: false,
+          words: []
+        };
+      }
+    
+      componentDidMount() {
+        fetch("http://localhost:8182/glossary/getAll")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                words: result
+              });
+            },
+            // Note: it's important to handle errors here
+            // instead of a catch() block so that we don't swallow
+            // exceptions from actual bugs in components.
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
+      }
 
     render(){
-        return(
-            <div id="aboutUsInfo" class="container-fluid">
+        const { error, isLoaded, words } = this.state;
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div>Loading...</div>;
+        } else {
+            return (
+
+
+            <div id="wordsContent" class="container-fluid">
                 <div className="jumbotron jumbotron-sm">
                     <div id="searchFunction">
                         <form className="form-inline my-2 my-lg-0">
@@ -19,11 +57,16 @@ class Glossary extends Component{
                     </div>
                     <div className="container">
                         <div className="row">
+
+
                             <div className="col-sm-12 col-lg-12">
-                                <h1 className="h1">
-                                    Glossary </h1>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <ul>
+                            {this.state.words.map(word => (
+                                <li key={word.keyword}>
+                                {word.keyword} {word.definition}
+                                </li>
+                            ))}
+                            </ul>
                             </div>
                             <div class="col-sm-4">
                                 <span class="glyphicon glyphicon-signal logo"></span>
@@ -31,18 +74,10 @@ class Glossary extends Component{
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
 
-
-
-
-
-
-
         );
+    }
     }
 }
 
