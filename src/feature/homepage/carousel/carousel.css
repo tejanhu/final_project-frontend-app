@@ -1,0 +1,29 @@
+.carousel img {
+    object-fit: cover;
+}
+
+.carousel-item div {
+    overflow: hidden;
+}
+
+.carousel-inner > .carousel-item > img {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+#logo {
+    padding: 20px;
+}
+
+.item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}

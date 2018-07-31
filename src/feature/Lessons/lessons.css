@@ -1,0 +1,12 @@
+.link {
+    color: black;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.list-group {
+    padding-bottom: 10px;
+}
