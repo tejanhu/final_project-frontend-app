@@ -10,7 +10,7 @@ function Player(props){
             top: props.position[1],
             left: props.position[0],
             backgroundImage: `url('${walkSprite}')`,
-            backgroundPosition: props.spriteLocation,
+            backgroundPosition: '0 0',
             width: '40px',
             height: '40px',
         }}

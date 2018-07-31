@@ -189,27 +189,3 @@
         position: relative;
 
 }
-
-.alert-shown {
-    opacity: 1;
-    transition: all 250ms linear;
-}
-
-.alert-hidden {
-    opacity: 0;
-    transition: all 250ms linear;
-}
-
-#correctAnswer {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    width: 45%;
-}
-
-#wrongAnswer {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    width: 45%;
-}
