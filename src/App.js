@@ -10,6 +10,7 @@ import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
 import Login from "./feature/Login/login";
 import Signup from "./feature/Signup/signup";
+import Profile from "./feature/Profile/Profile";
 
 class App extends Component {
     constructor(props) {
@@ -20,28 +21,30 @@ class App extends Component {
     }
 
     getCurrentPage(){
-        switch(this.state.pageName) {
-            case "home":
-                return <Home handleClick={(newPage) => this.handleClick(newPage)}/>
-            case "game":
-                return <Game  />
-            case "about":
-                return <About />
-            case "contact":
-                return <Contact />
-            case "glossary":
-                return <Glossary />
-            case "lessons":
-                return <Lessons />
-            case "books":
-                return <Books />
-            case "login":
-                return <Login/>
-            case "signup":
-                return <Signup/>
-            default:
-                return <Home />
-        }
+      switch(this.state.pageName) {
+          case "home":
+              return <Home handleClick={(newPage) => this.handleClick(newPage)}/>
+          case "game":
+              return <Game />
+          case "about":
+              return <About />
+          case "contact":
+              return <Contact />
+          case "glossary":
+              return <Glossary />
+          case "lessons":
+              return <Lessons />
+          case "books":
+              return <Books />
+          case "login":
+              return <Login/>
+          case "signup":
+              return <Signup/>
+          case "profile":
+              return <Profile/>
+          default:
+              return <Home />
+      }  
     }
 
     handleClick(newPage){

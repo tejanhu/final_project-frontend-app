@@ -9,7 +9,7 @@
 # production
 /build
 
-.idea
+.idea/
 *.iml
 
 # misc
