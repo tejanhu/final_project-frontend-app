@@ -8,15 +8,17 @@ import Lessons from "./feature/Lessons/Lessons";
 import Contact from "./feature/Contact/contact";
 import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
-import Login from "./feature/Login/login";
-import Signup from "./feature/Signup/signup";
-import LeaderBoard from "./feature/LeaderBoard/leaderboard"
+import LeaderBoard from "./feature/LeaderBoard/leaderboard";
+import Register from "./Registration/App";
+
+
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state ={
             pageName: "home",
+            user:null,
         };
     }
 
@@ -36,12 +38,14 @@ class App extends Component {
               return <Lessons />
           case "books":
               return <Books />
-          case "login":
-              return <Login/>
-          case "signup":
-              return <Signup/>
+          // case "login":
+          //     return <Login/>
+          // case "signup":
+          //     return <Signup/>
           case "leaderboard":
               return<LeaderBoard />
+          case "register":
+              return<Register />
           default:
               return <Home />
       }  
@@ -55,6 +59,7 @@ class App extends Component {
         })
     }
 
+
   render() {
     console.log("App is rendering this function is rendering");
     console.log("this.state.pageName is " + this.state.pageName);
@@ -62,12 +67,18 @@ class App extends Component {
         <div>
             <Navbar handleClick={(newPage) => this.handleClick(newPage)}/>
             <div id ="body">
-              {this.getCurrentPage()}
+                {this.getCurrentPage()}
+
+                {/*{this.state.user ? (this.getCurrentPage()) : (<Login/>)}*/}
+
+
+
             </div>
             <Footer handleClick={(newPage) => this.handleClick(newPage)}/>
         </div>
     );
   }
+
 
 }
 export default App;

@@ -34,17 +34,16 @@ class LeaderBoard extends Component{
         leaderboardarray[4] = 150;
 
         leaderboardarray.sort(function(a, b){return b-a});
-        var myContent = '';
+        var myContent = "";
         for (var n=0;n<5;n++) {
             console.log("inside for loop")
             console.log(leaderboardarray[n])
-            myContent += leaderboardarray[n];
+            myContent += (n+1) + "." + " " + leaderboardarray[n]+"\n";
         }
 
         console.log(myContent);
-        console.log("end of leaderboard() function");
         return myContent;
-
+        console.log("end of leaderboard() function");
 
     }
 

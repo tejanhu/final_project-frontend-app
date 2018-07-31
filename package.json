@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.3.0",
+    "firebaseui": "^3.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-image-carousel": "^2.0.18",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.4.0"
   },
