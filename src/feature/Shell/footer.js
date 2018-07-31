@@ -1,7 +1,7 @@
+
 import React, { Component } from 'react';
 import '../../App.css';
 import ReactDOM from "react-dom";
-
 
 class Footer extends Component{
 
@@ -13,9 +13,9 @@ class Footer extends Component{
                         <div className="col-xs-12 col-sm-4 col-md-4">
                             {/*<h5>Quick links</h5>*/}
                             <ul className="list-unstyled quick-links">
-                                <li><a onClick={() => this.props.handleClick("lessons")}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                                 <li><a onClick={() => this.props.handleClick("about")}><i className="fa fa-angle-double-right"></i>About Us</a></li>
                                 <li><a onClick={() => this.props.handleClick("glossary")}><i className="fa fa-angle-double-right"></i>Glossary</a></li>
+                                <li><a onClick={() => this.props.handleClick("lessons")}><i className="fa fa-angle-double-right"></i>Lessons</a></li>
                                 <li><a onClick={() => this.props.handleClick("books")}><i className="fa fa-angle-double-right"></i>Books</a></li>
                             </ul>
                         </div>
@@ -24,8 +24,8 @@ class Footer extends Component{
                             <ul className="list-unstyled quick-links">
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
                                 <li><a href="#"><i className="fa fa-angle-double-right"></i>Privacy</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Sign Up</a></li>
-                                <li><a href="#"><i className="fa fa-angle-double-right"></i>Login</a></li>
+                                <li><a onClick={() => this.props.handleClick("signup")}><i className="fa fa-angle-double-right" ></i>Sign Up</a></li>
+                                <li><a onClick={() => this.props.handleClick("login")}><i className="fa fa-angle-double-right"></i>Login</a></li>
                             </ul>
                         </div>
                         <div className="col-xs-12 col-sm-4 col-md-4">
@@ -46,15 +46,15 @@ class Footer extends Component{
                                 <li className="list-inline-item"><a href="#" target="_blank"><i className="fab fa-envelope"></i></a></li>
                             </ul>
                         </div>
-                </div>
-                <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                        {/*<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>*/}
-                        <p className="h6">© 2018 Copyright All right Reversed.</p>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                            {/*<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>*/}
+                            <p className="h6">© 2018 Copyright All right Reversed.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </section>
+            </section>
         );
     }
 }

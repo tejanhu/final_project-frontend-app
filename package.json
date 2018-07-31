@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "arrow-keys-react": "^1.0.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-image-carousel": "^2.0.18",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

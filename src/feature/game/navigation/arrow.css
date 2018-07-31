@@ -1,0 +1,27 @@
+.buttonNORTH {
+    position: absolute;
+    left:50%;
+    top: 30%;
+    font-size: 1.3vw;
+}
+
+.buttonSOUTH {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 1.3vw;
+}
+
+.buttonWEST {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    font-size: 1.3vw;
+}
+
+.buttonEAST {
+    position: absolute;
+    left: 70%;
+    top:50%;
+    font-size: 1.3vw;
+}

@@ -1,0 +1,11 @@
+string Collection of characters which can be letters and numeric.
+integer A data type used for whole numeric values.
+array A collection of a common type of data.
+pojo Plain Old Java Object.
+abstract A class that is not instantiated but is inherited from. A parent class
+api Application Programming Interface. The specification of how a programmer writing an application accesses the behaviour and state of classes and objects.
+bean A reusable software component. An application can have many beans to create an application.
+block The code that exists between a pair of curly braces.
+boolean A data type that can either be 'true' or 'false'.
+class A set of attributes and methods used to define a single object.
+

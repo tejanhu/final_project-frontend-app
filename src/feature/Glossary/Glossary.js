@@ -8,6 +8,15 @@ class Glossary extends Component{
         return(
             <div id="aboutUsInfo" class="container-fluid">
                 <div className="jumbotron jumbotron-sm">
+                    <div id="searchFunction">
+                        <form className="form-inline my-2 my-lg-0">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search"
+                                   aria-label="Search"/>
+                            <button className="btn btn-outline-success my-2 my-sm-0"
+                                    type="submit">Search
+                            </button>
+                        </form>
+                    </div>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 col-lg-12">
