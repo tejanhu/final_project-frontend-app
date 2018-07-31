@@ -11,7 +11,7 @@ import Books from "./feature/Books/Books";
 import LeaderBoard from "./feature/LeaderBoard/leaderboard";
 import Register from "./Registration/App";
 
-
+import Profile from "./feature/Profile/Profile";
 
 class App extends Component {
     constructor(props) {
@@ -46,6 +46,8 @@ class App extends Component {
               return<LeaderBoard />
           case "register":
               return<Register />
+          case "profile":
+              return <Profile/>
           default:
               return <Home />
       }  
@@ -55,10 +57,9 @@ class App extends Component {
         console.log("icon has been clicked");
         console.log("pagename is " + newPage);
         this.setState({
-          pageName: newPage
+            pageName: newPage
         })
     }
-
 
   render() {
     console.log("App is rendering this function is rendering");
@@ -70,15 +71,13 @@ class App extends Component {
                 {this.getCurrentPage()}
 
                 {/*{this.state.user ? (this.getCurrentPage()) : (<Login/>)}*/}
-
-
-
             </div>
-            <Footer handleClick={(newPage) => this.handleClick(newPage)}/>
         </div>
     );
-  }
-
-
+    }
 }
+
+
+
+
 export default App;

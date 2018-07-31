@@ -2,11 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da6ad38e-9d48-4a4a-bf89-2cfc3a6ea55a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/.jsdtscope" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dictionary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/datatypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/objandclass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/overview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/syntax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/introduction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/operators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/statements.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/syntax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/lessons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/introduction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/numbers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/syntax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/variables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Achievements/Achievement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Achievements/achievement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/Profile/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/game/data/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/game/data/mapList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/game/handleMovement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/achievement6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/color_wheel.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/Books/Books.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Books/Books.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/Glossary/Glossary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Glossary/Glossary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/Lessons/Lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Lessons/Lessons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/Shell/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Shell/footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/feature/Shell/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Shell/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/data/maps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/map/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/map/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/map/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation/Arrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/navigation/Arrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation/arrow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/navigation/arrow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/question/EnemyInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/question/EnemyInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/game/world/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/world/World.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/popper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,25 +119,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="38" />
+          <entry key="js" value="41" />
+          <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="38" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="20" />
-          <entry key="js" value="3107" />
+          <entry key="js" value="3139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="20" />
-          <entry key="JavaScript" value="3107" />
+          <entry key="JavaScript" value="3139" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -103,24 +159,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Registration/Session/withAuthorization.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Registration/App/index.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/feature/Profile/Profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="462">
+              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +183,7 @@
         <entry file="file://$PROJECT_DIR$/src/Registration/Navigation/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -150,18 +203,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Registration/constants/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Registration/SignUp/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/feature/Books/Books.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -180,7 +239,7 @@
         <entry file="file://$PROJECT_DIR$/src/feature/game/Game.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+              <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -236,11 +295,13 @@
         <option value="$PROJECT_DIR$/src/Registration/Session/withAuthentication.js" />
         <option value="$PROJECT_DIR$/src/Registration/Session/withAuthorization.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Registration/App/index.js" />
         <option value="$PROJECT_DIR$/src/feature/Shell/navbar.js" />
         <option value="$PROJECT_DIR$/src/Registration/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/Registration/constants/routes.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/feature/Profile/Profile.js" />
       </list>
     </option>
   </component>
@@ -288,6 +349,20 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Books" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Profile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -440,12 +515,12 @@
       <workItem from="1532954952079" duration="6998000" />
       <workItem from="1532984080746" duration="2776000" />
       <workItem from="1533023477209" duration="22813000" />
-      <workItem from="1533055447254" duration="2496000" />
+      <workItem from="1533055447254" duration="3393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39749000" />
+    <option name="totallyTimeSpent" value="40646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
@@ -615,16 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Registration/Session/withAuthorization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -664,7 +729,7 @@
     <entry file="file://$PROJECT_DIR$/src/feature/game/Game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+          <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -684,7 +749,7 @@
     <entry file="file://$PROJECT_DIR$/src/Registration/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -694,7 +759,46 @@
     <entry file="file://$PROJECT_DIR$/src/Registration/constants/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/feature/Books/Books.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/feature/Profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

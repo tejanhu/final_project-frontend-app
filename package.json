@@ -9,6 +9,9 @@
     "react-dom": "^16.4.1",
     "react-image-carousel": "^2.0.18",
     "react-router-dom": "^4.3.1",
+    "rc-progress": "^2.2.5",
+    "arrow-keys-react": "^1.0.6",
+    "react-progressbar.js": "^0.2.0",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.4.0"
   },

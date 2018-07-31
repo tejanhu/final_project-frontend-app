@@ -1,79 +1,65 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import './game.css';
 import PlayerInfo from './navigation/PlayerInfo';
 import Compass from "./navigation/Compass";
 import Difficulty from "./Difficulty";
 import World from "./world/World";
-import { SPRITE_SIZE } from '../../config/Constants';
+import { SPRITE_SIZE, MAP_HEIGHT, MAP_WIDTH, TILES_WIDE_COUNT, TILES_HIGH_COUNT, MAP_LIST_HEIGHT, MAP_LIST_WIDTH } from '../../config/Constants';
 import Question from './question/Question';
 import BattleInfo from './question/BattleInfo';
-import maps from './data/maps';
+import mapList from './data/mapList';
+import handleMovement from './handleMovement';
+import ArrowKeysReact from 'arrow-keys-react';
 
 
 class Game extends Component {
     constructor(props) {
         super(props);
+        const self =this;
+
+        ArrowKeysReact.config({
+            left: () => {
+                console.log("left arrow key pressed");
+                this.handleArrowPress('WEST');
+            },
+            right: () => {
+                 this.handleArrowPress('EAST');
+            },
+            up: () => {
+                this.handleArrowPress('NORTH');
+            },
+            down: () => {
+                this.handleArrowPress('SOUTH');
+            }
+        });
+
+        window.addEventListener("keydown", function(e) {
+            // space and arrow keys
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
         this.state = {
-          position: [0,0],
-          onQuestion: false,
-          questions: [],
-          score: 0,
-          playerName: "Hussein",
-          currentHp: 10,
-          maxHp: 10,
-          currentLevel: 8,
-          loading: false,
-          map: maps[0]
+            position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
+            onQuestion: false,
+            questions: [],
+            score: 0,
+            playerName: "Hussein",
+            currentHp: 10,
+            maxHp: 10,
+            currentLevel: 8,
+            loading: false,
+            mapCOORD: [1,1],
+            correctVisible: false,
+            wrongVisible: false
         };
     }
 
-    inBounds(position){
-        return (position[0] >= 0 && position[0] <=(520-SPRITE_SIZE)
-        && position[1] >= 0 && position[1] <= (260-SPRITE_SIZE))
-    }
-
-    isValidPosition(position){
-        if(!this.inBounds(position)){
-            return false
-        }
-
-        const tiles = this.state.map
-        const y = position[1] / SPRITE_SIZE
-        const x = position[0] / SPRITE_SIZE
-        const nextTile = tiles[y][x]
-
-        return (nextTile < 5)
-    }
-
-    handleMovement(direction){
-        const oldPos = this.state.position;
-        let newPosition;
-        console.log("in handle movement oldPos is: " + oldPos);
-        switch(direction){
-            case 'WEST':
-                newPosition =  [oldPos[0]-SPRITE_SIZE, oldPos[1]];
-                break;
-            case 'EAST':
-                newPosition =  [oldPos[0]+SPRITE_SIZE, oldPos[1]];
-                break;
-            case 'NORTH':
-                newPosition =  [oldPos[0], oldPos[1]-SPRITE_SIZE];
-                break;
-            case 'SOUTH':
-                newPosition =  [oldPos[0], oldPos[1]+SPRITE_SIZE];
-                break;
-            default:
-                newPosition =  oldPos    
-        }
-        if(this.isValidPosition(newPosition)){
-            return newPosition
-        }else{
-            return oldPos
-        } 
-    }
 
     getNewPosition(direction){
-        const newPosition = this.handleMovement(direction);
+        const newPosition = handleMovement(direction, this);
         this.setState({
             position: newPosition
         })
@@ -86,6 +72,8 @@ class Game extends Component {
         })
     }
 
+    
+
     handleArrowPress(direction){
         console.log(direction + ": has been pressed");
 
@@ -93,7 +81,7 @@ class Game extends Component {
         console.log("newPosition: " + this.state.position);
 
         const randomSeed = Math.random();
-        if(randomSeed < 0.2){
+        if(randomSeed < 0.05){
             this.getQuestion();
         }
         
@@ -105,6 +93,9 @@ class Game extends Component {
 
         if(answer.answerBoolean){
             newScore += 100;
+            this.handleClickShowAlert("correct");
+        } else {
+            this.handleClickShowAlert("wrong");
         }
         
         this.setState({
@@ -114,7 +105,6 @@ class Game extends Component {
     }
 
     componentDidMount() {
-      
         this.setState({
             questions: [
                 {description: "What will add(5,2) output when ran?",
@@ -127,18 +117,48 @@ class Game extends Component {
         }
         ]
         })
+
+    }
+
+    handleClickShowAlert(answer) {
+
+        if (answer === "correct"){
+            this.setState({
+                correctVisible: true
+            });
+
+            setTimeout(() => {
+                this.setState({
+                    correctVisible: false
+                });
+            }, 2000);
+        } else if (answer === "wrong"){
+            this.setState({
+                wrongVisible: true
+            });
+
+            setTimeout(() => {
+                this.setState({
+                    wrongVisible: false
+                });
+            }, 2000);
+        }
+
     }
 
     render() {
-        console.log("this.state.map is " + this.state.map)
+        console.log("this.state.mapCoord is " + this.state.mapCOORD);
+        let map = mapList[this.state.mapCOORD[0]][this.state.mapCOORD[1]];
+        console.log("player position is :" + this.state.position);
+        console.log("map is : " + map);
         return (
-            <div className="gameContainer">
+            <div className="gameContainer" {...ArrowKeysReact.events} tabIndex="1">
                  <div className="gameBanner">
                       <Difficulty />
                       
                 </div>
                 <div className="playerInfo">
-                    <PlayerInfo score={this.state.score}/>
+                    <PlayerInfo score={(event) => this.state.score(event)}/>
                 </div>
                 <div className="sideDisplay">
                     {(this.state.onQuestion) ?
@@ -147,11 +167,15 @@ class Game extends Component {
                     <Compass handleArrowPress={(direction) => this.handleArrowPress(direction)}/>
                     } 
                 </div>
-                <div className="mainDisplay" >
+                <div className="mainDisplay"  onKeyDown={this.handleKeyDown}>
                     {(this.state.onQuestion) ? 
                     <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
-                    <World position={this.state.position} tiles={this.state.map}/>  }
+                    <World position={this.state.position} tiles={map}/>  }
+                </div>
+                <div>
+                    <div id={"correctAnswer"} className={`alert alert-success ${this.state.correctVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Correct! Well done!</strong> You win the battle!</div>
+                    <div id={"wrongAnswer"} className={`alert alert-danger ${this.state.wrongVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Incorrect!</strong> Try again next time.</div>
                 </div>
             </div>
     );
