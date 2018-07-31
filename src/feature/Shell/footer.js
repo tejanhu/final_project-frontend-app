@@ -46,15 +46,15 @@ class Footer extends Component{
                                 <li className="list-inline-item"><a href="#" target="_blank"><i className="fab fa-envelope"></i></a></li>
                             </ul>
                         </div>
-                </div>
-                <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                        {/*<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>*/}
-                        <p className="h6">© 2018 Copyright All right Reversed.</p>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                            {/*<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>*/}
+                            <p className="h6">© 2018 Copyright All right Reversed.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </section>
+            </section>
         );
     }
 }
