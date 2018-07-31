@@ -116,7 +116,3 @@ section .section-title {
 #searchFunction{
   float:right !important;
 }
-
-a:hover {
-  cursor:pointer;
-}
