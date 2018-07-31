@@ -1,8 +1,49 @@
+.arrow {
+	/* more triangle */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 14px solid;
+	border-color: 
+		darkcyan
+		darkcyan
+		transparent
+		transparent;
+	transform: rotate(45deg); 
+}
+
+.arrow:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 12px; width: 16px;
+	background-color: darkcyan;
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+}
+
+.arrow:hover{
+    	border-color: 
+		lightskyblue
+		lightskyblue
+		transparent
+        transparent;
+        cursor:pointer;
+}
+
+.arrow:hover:before{
+    background-color: lightskyblue;
+    cursor:pointer;
+
+}
+
 .buttonNORTH {
     position: absolute;
     left:50%;
     top: 30%;
     font-size: 1.3vw;
+    transform: rotate(-45deg); 
 }
 
 .buttonSOUTH {
@@ -10,6 +51,7 @@
     left: 50%;
     top: 70%;
     font-size: 1.3vw;
+    transform: rotate(135deg); 
 }
 
 .buttonWEST {
@@ -17,6 +59,7 @@
     left: 30%;
     top: 50%;
     font-size: 1.3vw;
+    transform: rotate(225deg); 
 }
 
 .buttonEAST {
