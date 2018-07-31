@@ -42,16 +42,18 @@ class Game extends Component {
         }, false);
 
         this.state = {
-          position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
-          onQuestion: false,
-          questions: [],
-          score: 0,
-          playerName: "Hussein",
-          currentHp: 10,
-          maxHp: 10,
-          currentLevel: 8,
-          loading: false,
-          mapCOORD: [1,1]
+            position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
+            onQuestion: false,
+            questions: [],
+            score: 0,
+            playerName: "Hussein",
+            currentHp: 10,
+            maxHp: 10,
+            currentLevel: 8,
+            loading: false,
+            mapCOORD: [1,1],
+            correctVisible: false,
+            wrongVisible: false
         };
     }
 
@@ -91,6 +93,9 @@ class Game extends Component {
 
         if(answer.answerBoolean){
             newScore += 100;
+            this.handleClickShowAlert("correct");
+        } else {
+            this.handleClickShowAlert("wrong");
         }
         
         this.setState({
@@ -112,6 +117,32 @@ class Game extends Component {
         }
         ]
         })
+
+    }
+
+    handleClickShowAlert(answer) {
+
+        if (answer === "correct"){
+            this.setState({
+                correctVisible: true
+            });
+
+            setTimeout(() => {
+                this.setState({
+                    correctVisible: false
+                });
+            }, 2000);
+        } else if (answer === "wrong"){
+            this.setState({
+                wrongVisible: true
+            });
+
+            setTimeout(() => {
+                this.setState({
+                    wrongVisible: false
+                });
+            }, 2000);
+        }
 
     }
 
@@ -141,6 +172,10 @@ class Game extends Component {
                     <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
                     <World position={this.state.position} tiles={map}/>  }
+                </div>
+                <div>
+                    <div id={"correctAnswer"} className={`alert alert-success ${this.state.correctVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Correct! Well done!</strong> You win the battle!</div>
+                    <div id={"wrongAnswer"} className={`alert alert-danger ${this.state.wrongVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Incorrect!</strong> Try again next time.</div>
                 </div>
             </div>
     );
