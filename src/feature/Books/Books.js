@@ -2,10 +2,47 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class Books extends Component{
-
+    constructor(props) {
+        super(props);
+        this.state = {
+          error: null,
+          isLoaded: false,
+          books: []
+        };
+      }
+    
+      componentDidMount() {
+        fetch("http://localhost:8182/book/search/programming")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                books: result
+              });
+            },
+            // Note: it's important to handle errors here
+            // instead of a catch() block so that we don't swallow
+            // exceptions from actual bugs in components.
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
+      }
 
     render(){
-        return(
+        const { error, isLoaded, books } = this.state;
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div>Loading...</div>;
+        } else {
+            return (
+
+
             <div id="booksContent" class="container-fluid">
                 <div className="jumbotron jumbotron-sm">
                     <div id="searchFunction">
@@ -22,10 +59,16 @@ class Books extends Component{
 
 
                             <div className="col-sm-12 col-lg-12">
-                                <h1 className="h1">Books </h1>
-                                </div>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <table className="table table-striped">
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                {this.state.books.map(book => (
+                                    <tr key={book.name}>
+                                        <td>{book.name}</td>
+                                        <td>{book.author}</td>
+                                    </tr>
+                                ))}
+                                </table>
                             </div>
                             <div class="col-sm-4">
                                 <span class="glyphicon glyphicon-signal logo"></span>
@@ -33,8 +76,10 @@ class Books extends Component{
                         </div>
                     </div>
                 </div>
+            </div>
 
         );
+    }
     }
 }
 
