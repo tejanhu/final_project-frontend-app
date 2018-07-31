@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "rc-progress": "^2.2.5",
+    "arrow-keys-react": "^1.0.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-image-carousel": "^2.0.18",
