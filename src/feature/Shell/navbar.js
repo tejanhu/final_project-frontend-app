@@ -41,16 +41,7 @@ class Navbar extends Component{
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" onClick={() => this.props.handleClick("signup")}>Sign Up</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" onClick={() => this.props.handleClick("login")}>Login</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" onClick={() => this.props.handleClick("logout")}>Logout</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" onClick={() => this.props.handleClick("leaderboard")}>LeaderBoard</a>
+                            <a className="nav-link" onClick={() => this.props.handleClick("leaderboard")}>Leaderboard</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" onClick={() => this.props.handleClick("register")}>Register</a>
