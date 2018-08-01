@@ -13,8 +13,8 @@ class About extends Component{
                             <div className="col-sm-12 col-lg-12">
                                 <h1 className="h1">
                                     About us </h1>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                {/*<p>Code'mon is an arcade-like game intended for children ages 3 - 11.</p>*/}
+                                <h4>Children in the UK have substantially less exposure to programming than many other countries. Code'mon is an arcade-like game intended for children ages 3 - 11 in the UK to help engage their interests in programming at an early age.</h4>
                             </div>
                             <div class="col-sm-4">
                                 <span class="glyphicon glyphicon-signal logo"></span>
@@ -28,9 +28,8 @@ class About extends Component{
                         <div className="row">
                             <div className="col-sm-12 col-lg-12">
                                 <h2>Our Values</h2>
-                                <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                                <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <h4><strong>MISSION:</strong> Our mission is to expose children in the UK to programming at an early age introducing it in a fun and enjoyable way.</h4>
+                                <h4><strong>VISION:</strong> Our vision is to drive the children in the UK to build the systems of the future of tomorrow.</h4>
                             </div>
                             <div className="col-sm-4">
                                 <span className="glyphicon glyphicon-signal logo"></span>
