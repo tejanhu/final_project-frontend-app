@@ -10,6 +10,7 @@ import Glossary from "./feature/Glossary/Glossary";
 import Books from "./feature/Books/Books";
 import Login from "./feature/Login/login";
 import Signup from "./feature/Signup/signup";
+import Profile from "./feature/Profile/Profile";
 
 class App extends Component {
     constructor(props) {
@@ -39,6 +40,8 @@ class App extends Component {
               return <Login/>
           case "signup":
               return <Signup/>
+          case "profile":
+              return <Profile/>
           default:
               return <Home />
       }  
@@ -48,23 +51,23 @@ class App extends Component {
         console.log("icon has been clicked");
         console.log("pagename is " + newPage);
         this.setState({
-          pageName: newPage
+            pageName: newPage
         })
     }
 
-  render() {
-    console.log("App is rendering this function is rendering");
-    console.log("this.state.pageName is " + this.state.pageName);
-    return (
-        <div>
-            <Navbar handleClick={(newPage) => this.handleClick(newPage)}/>
-            <div id ="body">
-              {this.getCurrentPage()}
+    render() {
+        console.log("App is rendering this function is rendering");
+        console.log("this.state.pageName is " + this.state.pageName);
+        return (
+            <div>
+                <Navbar handleClick={(newPage) => this.handleClick(newPage)}/>
+                <div id ="body">
+                    {this.getCurrentPage()}
+                </div>
+                <Footer handleClick={(newPage) => this.handleClick(newPage)}/>
             </div>
-            <Footer handleClick={(newPage) => this.handleClick(newPage)}/>
-        </div>
-    );
-  }
+        );
+    }
 
 }
 export default App;

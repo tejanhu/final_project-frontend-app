@@ -3,9 +3,8 @@ import './arrow.css';
 
 function Arrow(props) {
     return (
-        <button className={"button" + props.direction} onClick={props.onClick}>
-            {props.direction}
-        </button>
+        <div className={"button" + props.direction + " arrow"} onClick={props.onClick}>
+        </div>
     );
 }
 
