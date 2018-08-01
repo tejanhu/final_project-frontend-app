@@ -7,13 +7,6 @@ class PlayerInfo extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        // 测试 devServer 的代理功能
-        // fetch('/api/category')
-        //     .then(resp => resp.json())
-        //     .then(res => console.log('here here', res));
-    }
-
     render() {
         return (
             <div>

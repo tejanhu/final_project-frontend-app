@@ -20,7 +20,6 @@ class Game extends Component {
 
         ArrowKeysReact.config({
             left: () => {
-                console.log("left arrow key pressed");
                 this.handleArrowPress('WEST');
             },
             right: () => {
@@ -72,7 +71,7 @@ class Game extends Component {
     getQuestion(){
         const questions = this.state.questions;
         const question = questions[Math.floor(Math.random()*questions.length)]
-        console.log("getting random question");
+
         this.setState({
             onQuestion: true,
             question: question, 
@@ -81,10 +80,8 @@ class Game extends Component {
 
     
     handleArrowPress(direction){
-        console.log(direction + ": has been pressed");
 
         this.getNewPosition(direction);
-        console.log("newPosition: " + this.state.position);
 
         const randomSeed = Math.random();
         if(randomSeed < 0.05){
@@ -94,7 +91,6 @@ class Game extends Component {
     }
 
     handleAnswer(answer){
-        console.log("answer passed in is :" + answer);
         let newScore = this.state.score.valueOf();
 
         if(answer.correct){
@@ -122,7 +118,7 @@ class Game extends Component {
               this.setState({
                   currentQuestion: this.state.questions[0],
               })
-              console.log("questions : " + this.state.questions);
+
             },
 
             (error) => {
@@ -161,10 +157,9 @@ class Game extends Component {
     }
 
     render() {
-        console.log("this.state.mapCoord is " + this.state.mapCOORD);
+
         let map = mapList[this.state.mapCOORD[0]][this.state.mapCOORD[1]];
-        console.log("player position is :" + this.state.position);
-        console.log("map is : " + map);
+
         return (
             <div className="gameContainer" {...ArrowKeysReact.events} tabIndex="1">
                  <div className="gameBanner">

@@ -6,21 +6,11 @@ class Question extends Component {
     constructor(props) {
         super(props);
     }
-
-    componentDidMount() {
-        // 测试 devServer 的代理功能
-        // fetch('/api/category')
-        //     .then(resp => resp.json())
-        //     .then(res => console.log('here here', res));
-        
-    }
-
-    
+  
     render(){
         const question = this.props.question;
         const answers =  question.answers;
-       
-        console.log("current question is :  " + this.props.question.toString())
+
         return (
             <div
               style={{

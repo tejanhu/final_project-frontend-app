@@ -15,36 +15,36 @@ class Glossary extends Component{
 
       
 
-        filterList(event) { 
-            var updatedList = this.state.allWords;
-            updatedList = updatedList.filter(function(word){
-                return (word.keyword).toLowerCase().search(event.target.value.toLowerCase()) !== -1;
-            }); 
-            this.setState({words: updatedList});
-        }
+    filterList(event) { 
+        var updatedList = this.state.allWords;
+        updatedList = updatedList.filter(function(word){
+            return (word.keyword).toLowerCase().search(event.target.value.toLowerCase()) !== -1;
+        }); 
+        this.setState({words: updatedList});
+    }
       
     
-      componentDidMount() {
-        fetch("http://localhost:8182/glossary/getAll")
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                allWords: result
-              });
-              this.setState({
-                  words: this.state.allWords
-              })
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
-      }
+    componentDidMount() {
+    fetch("http://localhost:8182/glossary/getAll")
+        .then(res => res.json())
+        .then(
+        (result) => {
+            this.setState({
+            isLoaded: true,
+            allWords: result
+            });
+            this.setState({
+                words: this.state.allWords
+            })
+        },
+        (error) => {
+            this.setState({
+            isLoaded: true,
+            error
+            });
+        }
+        )
+    }
 
     render(){
         const { error, isLoaded, words } = this.state;
