@@ -9,21 +9,10 @@ class Info extends Component {
                     <div className="col-sm-12 col-lg-12">
                         <h1 className="h1">
                             How to Play </h1>
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut
-                            aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui
-                            officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                            tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h4>Navigation:</h4>
+                        <p>Use the arrow keys either on your keyboard or on the screen to navigate through the map</p>
+                        <h4>Goal:</h4>
+                        <p>You must travel through the land of Code'mon battling enemies each time a programming question appears.</p>
                     </div>
                     <div className="col-sm-4">
                         <span className="glyphicon glyphicon-signal logo"/>
