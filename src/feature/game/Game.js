@@ -45,6 +45,7 @@ class Game extends Component {
             position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
             onQuestion: false,
             questions: [],
+            currentQuestion: {},
             score: 0,
             playerName: "Hussein",
             currentHp: 10,
@@ -69,13 +70,16 @@ class Game extends Component {
     }
 
     getQuestion(){
+        const questions = this.state.questions;
+        const question = questions[Math.floor(Math.random()*questions.length)]
+        console.log("getting random question");
         this.setState({
             onQuestion: true,
+            question: question, 
         })
     }
 
     
-
     handleArrowPress(direction){
         console.log(direction + ": has been pressed");
 
@@ -93,7 +97,7 @@ class Game extends Component {
         console.log("answer passed in is :" + answer);
         let newScore = this.state.score.valueOf();
 
-        if(answer.answerBoolean){
+        if(answer.correct){
             newScore += 100;
             this.handleClickShowAlert("correct");
         } else {
@@ -107,19 +111,27 @@ class Game extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            questions: [
-                {description: "What will add(5,2) output when ran?",
-                answers:[
-                    {answerValue:"7", answerBoolean: true},
-                    {answerValue:"1", answerBoolean: false},
-                    {answerValue:"5", answerBoolean: false},
-                    {answerValue:"4", answerBoolean: false},
-                ]       
-        }
-        ]
-        })
+        fetch("http://localhost:8182/question/getAll")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                questions: result
+              });
+              this.setState({
+                  currentQuestion: this.state.questions[0],
+              })
+              console.log("questions : " + this.state.questions);
+            },
 
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
     }
 
     handleClickShowAlert(answer) {
@@ -171,7 +183,7 @@ class Game extends Component {
                 </div>
                 <div className="mainDisplay"  onKeyDown={this.handleKeyDown}>
                     {(this.state.onQuestion) ? 
-                    <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
+                    <Question question={this.state.question} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
                     <World position={this.state.position} spriteLocation={this.state.spriteLocation} tiles={map}/>  }
                 </div>
