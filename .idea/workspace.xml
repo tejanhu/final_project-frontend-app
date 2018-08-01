@@ -2,65 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da6ad38e-9d48-4a4a-bf89-2cfc3a6ea55a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/.jsdtscope" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dictionary.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/datatypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/objandclass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/overview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/java/syntax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/introduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/operators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/statements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/javascript/syntax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/lessons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/introduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/numbers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/syntax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Lessons/python/variables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Achievements/Achievement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Achievements/achievement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/Profile/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/game/data/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/game/data/mapList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/game/handleMovement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/achievement6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/color_wheel.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Books/Books.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Books/Books.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Glossary/Glossary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Glossary/Glossary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Lessons/Lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Lessons/Lessons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Shell/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Shell/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Shell/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Shell/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/firebase/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/feature/game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/data/maps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/map/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/map/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation/Arrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/navigation/Arrow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/navigation/arrow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/navigation/arrow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/question/EnemyInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/question/EnemyInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/game/world/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/game/world/World.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/popper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -108,18 +52,21 @@
     <session id="-1731168648">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.70" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="41" />
+          <entry key="js" value="42" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
@@ -127,37 +74,25 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="41" />
+          <entry key="JavaScript" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="20" />
-          <entry key="js" value="3139" />
+          <entry key="js" value="3916" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="20" />
-          <entry key="JavaScript" value="3139" />
+          <entry key="JavaScript" value="3916" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -167,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/feature/Profile/Profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+            <state relative-caret-position="1080">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -182,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Registration/Navigation/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="240">
               <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -194,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="15">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -213,20 +148,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feature/Books/Books.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/feature/Shell/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
+            <state relative-caret-position="600">
               <caret line="43" column="113" selection-start-line="43" selection-start-column="113" selection-end-line="43" selection-end-column="113" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -235,13 +159,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/feature/game/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+            <state relative-caret-position="492">
+              <caret line="88" column="23" lean-forward="true" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Registration/firebase/firebase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -290,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/feature/Login/logout.js" />
         <option value="$PROJECT_DIR$/src/feature/Logout/logout.js" />
         <option value="$PROJECT_DIR$/src/feature/Login/login.js" />
-        <option value="$PROJECT_DIR$/src/Registration/firebase/firebase.js" />
         <option value="$PROJECT_DIR$/src/Registration/PasswordForget/index.js" />
         <option value="$PROJECT_DIR$/src/Registration/Session/withAuthentication.js" />
         <option value="$PROJECT_DIR$/src/Registration/Session/withAuthorization.js" />
@@ -302,6 +237,8 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/feature/Profile/Profile.js" />
+        <option value="$PROJECT_DIR$/src/Registration/firebase/firebase.js" />
+        <option value="$PROJECT_DIR$/src/feature/game/Game.js" />
       </list>
     </option>
   </component>
@@ -322,93 +259,16 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="y" value="24" />
+    <option name="x" value="248" />
+    <option name="y" value="-4" />
     <option name="width" value="960" />
-    <option name="height" value="1056" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Books" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Profile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Shell" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="App" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="constants" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="SignUp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -466,6 +326,76 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="feature" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Books" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="App" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="constants" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="firebase" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="frontend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Registration" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="SignUp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,19 +445,31 @@
       <workItem from="1532954952079" duration="6998000" />
       <workItem from="1532984080746" duration="2776000" />
       <workItem from="1533023477209" duration="22813000" />
-      <workItem from="1533055447254" duration="3393000" />
+      <workItem from="1533055447254" duration="3640000" />
+      <workItem from="1533069869309" duration="1742000" />
+      <workItem from="1533110121811" duration="167000" />
+      <workItem from="1533110331735" duration="3461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40646000" />
+    <option name="totallyTimeSpent" value="46263000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7009472" visible="true" weight="0.185029" />
-      <window_info id="Structure" order="1" sideWeight="0.29905277" side_tool="true" visible="true" weight="0.185029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6955345" visible="true" weight="0.185029" />
+      <window_info id="Structure" order="1" sideWeight="0.3044655" side_tool="true" visible="true" weight="0.185029" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -536,9 +478,9 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3294979" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3294979" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22698745" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -654,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="7" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,23 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Registration/firebase/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="239" selection-start-line="10" selection-start-column="239" selection-end-line="10" selection-end-column="239" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Registration/Session/withAuthorization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,49 +630,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Shell/navbar.js">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="113" selection-start-line="43" selection-start-column="113" selection-end-line="43" selection-end-column="113" />
+        <state relative-caret-position="525">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/feature/Books/Books.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/feature/Profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Registration/SignOut/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/game/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/Registration/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="240">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Registration/Navigation/index.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -763,41 +690,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Books/Books.js">
+    <entry file="file://$PROJECT_DIR$/src/feature/Shell/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="600">
+          <caret line="43" column="113" selection-start-line="43" selection-start-column="113" selection-end-line="43" selection-end-column="113" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/src/Registration/SignOut/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Registration/firebase/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="330">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/feature/game/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feature/Profile/Profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        <state relative-caret-position="492">
+          <caret line="88" column="23" lean-forward="true" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,12 +11,14 @@ import BattleInfo from './question/BattleInfo';
 import mapList from './data/mapList';
 import handleMovement from './handleMovement';
 import ArrowKeysReact from 'arrow-keys-react';
+import fire from "../../Registration/firebase/firebase"
 
 
 class Game extends Component {
     constructor(props) {
         super(props);
         const self =this;
+        this.state = {messages: []};
 
         ArrowKeysReact.config({
             left: () => {
@@ -55,7 +57,24 @@ class Game extends Component {
             correctVisible: false,
             wrongVisible: false
         };
-    }
+
+
+        function componentWillMount() {
+
+        }
+
+        componentWillMount()
+        {
+            /* Create reference to messages in Firebase Database */
+            let messagesRef = fire.database().ref('Player').child('Score').orderByKey().limitToLast(100);
+            messagesRef.on('child_added', snapshot => {
+                /* Update React state when message is added at Firebase Database */
+                let message = { text: snapshot.val(), id: snapshot.key };
+                this.setState({ messages: [message].concat(this.state.messages) });
+            })
+        }
+
+}
 
 
     getNewPosition(direction){
@@ -93,6 +112,7 @@ class Game extends Component {
 
         if(answer.answerBoolean){
             newScore += 100;
+            fire.database().ref('Player').child('Score').set(newScore);
             this.handleClickShowAlert("correct");
         } else {
             this.handleClickShowAlert("wrong");
@@ -178,6 +198,7 @@ class Game extends Component {
                     <div id={"wrongAnswer"} className={`alert alert-danger ${this.state.wrongVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Incorrect!</strong> Try again next time.</div>
                 </div>
             </div>
+
     );
     }
 }
