@@ -28,9 +28,9 @@
 }
 
 #profileTitle {
-    position: absolute;
+    position: relative;
     top: 2%;
-    left: 56%;
+    left: 6%;
 }
 
 #backgroundButton {

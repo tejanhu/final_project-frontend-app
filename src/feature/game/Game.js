@@ -11,12 +11,14 @@ import BattleInfo from './question/BattleInfo';
 import mapList from './data/mapList';
 import handleMovement from './handleMovement';
 import ArrowKeysReact from 'arrow-keys-react';
+import fire from "../../Registration/firebase/firebase"
 
 
 class Game extends Component {
     constructor(props) {
         super(props);
         const self =this;
+        this.state = {messages: []};
 
         ArrowKeysReact.config({
             left: () => {
@@ -57,7 +59,30 @@ class Game extends Component {
             spriteLocation: '0px 0px',
             walkIndex: 0,           
         };
-    }
+
+
+        function componentWillMount() {
+
+        }
+
+        componentWillMount()
+        {
+            fire.auth().onAuthStateChanged(function(user){
+                if (user){
+                    user = fire.auth().currentUser;
+                    let messagesRef = fire.database().ref(user.uid).child('Score').orderByKey().limitToLast(100);
+                    messagesRef.on('child_added', snapshot => {
+                        /* Update React state when message is added at Firebase Database */
+                        let message = { text: snapshot.val(), id: snapshot.key };
+                        this.setState({ messages: [message].concat(this.state.messages) });
+                    })
+                }else{
+
+                }
+            })
+        }
+
+}
 
 
     getNewPosition(direction){
@@ -95,6 +120,19 @@ class Game extends Component {
 
         if(answer.correct){
             newScore += 100;
+            fire.auth().onAuthStateChanged(function(user){
+                if (user){
+                    user = fire.auth().currentUser;
+                    fire.database().ref('Player').child(user.uid).child('Score').set(newScore);
+                }else{
+
+                }
+            })
+
+            fire.database().ref('Everyone').child('scored').push(newScore);
+            console.log(fire.database().ref('Everyone').child('scored'))
+            console.log('everyone')
+
             this.handleClickShowAlert("correct");
         } else {
             this.handleClickShowAlert("wrong");
@@ -118,7 +156,6 @@ class Game extends Component {
               this.setState({
                   currentQuestion: this.state.questions[0],
               })
-
             },
 
             (error) => {
@@ -167,7 +204,8 @@ class Game extends Component {
                       
                 </div>
                 <div className="playerInfo">
-                    <PlayerInfo score={(event) => this.state.score(event)}/>
+                    {/*<PlayerInfo score={(event) => this.state.score(event)}/>*/}
+                    <PlayerInfo/>
                 </div>
                 <div className="sideDisplay">
                     {(this.state.onQuestion) ?
@@ -187,6 +225,7 @@ class Game extends Component {
                     <div id={"wrongAnswer"} className={`alert alert-danger ${this.state.wrongVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Incorrect!</strong> Try again next time.</div>
                 </div>
             </div>
+
     );
     }
 }
