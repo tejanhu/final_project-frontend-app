@@ -22,7 +22,6 @@ export default function handleMovement(direction, gameThis){
     }
 
     function isValidMap(mapCOORD){
-        console.log("checking if new map is valid")
         return (mapCOORD[0] >= 0 && mapCOORD[0] < MAP_LIST_HEIGHT && mapCOORD[1] >= 0 && mapCOORD[1] < MAP_LIST_WIDTH);
     }
 
@@ -54,7 +53,6 @@ export default function handleMovement(direction, gameThis){
         }
 
         if(isValidMap(newMapCOORD)){
-            console.log("changing new position to" + newPosition);
             gameThis.setState({
                     positiion: newPosition,
             })
@@ -70,8 +68,10 @@ export default function handleMovement(direction, gameThis){
     function handleMovement(direction){
         const oldPos = gameThis.state.position;
         let newPosition;
-        console.log("in handle movement oldPos is: " + oldPos);
-        console.log("direction is : " + direction)
+        let newSpriteLocation = getSpriteLocation(direction);
+        gameThis.setState({
+            spriteLocation: newSpriteLocation
+        });
         switch(direction){
             case 'WEST':
                 newPosition =  [oldPos[0]-SPRITE_SIZE, oldPos[1]];
@@ -85,6 +85,33 @@ export default function handleMovement(direction, gameThis){
             case 'SOUTH':
                 newPosition =  [oldPos[0], oldPos[1]+SPRITE_SIZE];
                 break;
+        }
+
+        function getSpriteLocation(direction){
+            const walkIndex = getWalkIndex();
+            
+            gameThis.setState({
+                walkIndex: walkIndex
+            })
+            switch(direction){
+                case 'WEST':
+                    return `${SPRITE_SIZE*walkIndex}px ${SPRITE_SIZE*2}px`;
+                case 'EAST':
+                    return `${SPRITE_SIZE*walkIndex}px ${SPRITE_SIZE*1}px`;
+                case 'NORTH':
+                    return `${SPRITE_SIZE*walkIndex}px ${SPRITE_SIZE*3}px`;
+                case 'SOUTH':
+                    return `${SPRITE_SIZE*walkIndex}px ${SPRITE_SIZE*0}px`;
+            }
+        }
+
+        function getWalkIndex(){
+            const walkIndex = gameThis.state.walkIndex;
+            if(walkIndex >= 8 ){
+                return 0;
+            }else{
+                return walkIndex+1;
+            }
         }
 
         if(!inBounds(newPosition)){

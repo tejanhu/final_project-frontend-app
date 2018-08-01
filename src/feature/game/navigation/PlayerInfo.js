@@ -12,7 +12,6 @@ class PlayerInfo extends Component {
         }
     }
 
-
     componentDidMount() {
         const self = this;
 

@@ -7,9 +7,46 @@ class Books extends Component{
         this.state = {
           error: null,
           isLoaded: false,
-          books: []
+          books: [],
+          searchValue: "programming"
         };
       }
+
+      fetchBooks(){
+        fetch(`http://localhost:8182/book/search/${this.state.searchValue}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+              this.setState({
+                  isLoaded: true,
+                  books: result
+              });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+      }
+
+      performSearch(event) {
+          if(event.key === 'Enter' ){
+            event.preventDefault();
+            if(event.target.value === ""){
+                return;
+            }
+     
+            this.setState({
+                searchValue: event.target.value
+            }, () => {
+                this.fetchBooks()
+            });
+    
+
+          }
+    }
     
       componentDidMount() {
         fetch("http://localhost:8182/book/search/programming")
@@ -48,10 +85,7 @@ class Books extends Component{
                     <div id="searchFunction">
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search"
-                                   aria-label="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0"
-                                    type="submit">Search
-                            </button>
+                                   aria-label="Search" onKeyPress={event => this.performSearch(event)}/>
                         </form>
                     </div>
                     <div className="container">

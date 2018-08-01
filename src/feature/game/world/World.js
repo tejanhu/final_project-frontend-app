@@ -3,7 +3,7 @@ import Map from '../map/Map';
 import Player from '../player/Player';
 
 function World(props){
-    console.log("in world props.tiles is : " + props.tiles)
+
     return(
         <div
         style={{
@@ -14,7 +14,7 @@ function World(props){
         }}
         >
             <Map tiles={props.tiles}/>
-            <Player position={props.position}/>
+            <Player position={props.position} spriteLocation={props.spriteLocation}/>
         </div>
 
     )

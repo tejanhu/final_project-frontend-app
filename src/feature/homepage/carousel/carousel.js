@@ -4,8 +4,6 @@ import carousel2 from './carousel2.png';
 import carousel3 from './carousel3.png';
 import logo from './logo.png';
 import './carousel.css';
-import ReactDOM from "react-dom";
-import Game from "../../game/Game";
 
 class Carousel extends Component {
 

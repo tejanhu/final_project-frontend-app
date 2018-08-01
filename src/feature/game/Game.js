@@ -22,7 +22,6 @@ class Game extends Component {
 
         ArrowKeysReact.config({
             left: () => {
-                console.log("left arrow key pressed");
                 this.handleArrowPress('WEST');
             },
             right: () => {
@@ -47,6 +46,7 @@ class Game extends Component {
             position: [3*SPRITE_SIZE, 3*SPRITE_SIZE],
             onQuestion: false,
             questions: [],
+            currentQuestion: {},
             score: 0,
             playerName: "Hussein",
             currentHp: 10,
@@ -55,7 +55,9 @@ class Game extends Component {
             loading: false,
             mapCOORD: [1,1],
             correctVisible: false,
-            wrongVisible: false
+            wrongVisible: false,
+            spriteLocation: '0px 0px',
+            walkIndex: 0,           
         };
 
 
@@ -65,22 +67,6 @@ class Game extends Component {
 
         componentWillMount()
         {
-            /* Create reference to messages in Firebase Database */
-            // let messagesRef = fire.database().ref('Player').child('Score').orderByKey().limitToLast(100);
-            // messagesRef.on('child_added', snapshot => {
-            //     /* Update React state when message is added at Firebase Database */
-            //     let message = { text: snapshot.val(), id: snapshot.key };
-            //     this.setState({ messages: [message].concat(this.state.messages) });
-            // })
-            // {fire.database().ref('Player').child('Score').on("value", function(datasnapshot)
-            // {
-            //     let myScore = datasnapshot.val().valueOf();
-            //     self.setState({
-            //         score: myScore,
-            //
-            //     })
-            // })
-            // }
             fire.auth().onAuthStateChanged(function(user){
                 if (user){
                     user = fire.auth().currentUser;
@@ -108,18 +94,19 @@ class Game extends Component {
     }
 
     getQuestion(){
+        const questions = this.state.questions;
+        const question = questions[Math.floor(Math.random()*questions.length)]
+
         this.setState({
             onQuestion: true,
+            question: question, 
         })
     }
 
     
-
     handleArrowPress(direction){
-        console.log(direction + ": has been pressed");
 
         this.getNewPosition(direction);
-        console.log("newPosition: " + this.state.position);
 
         const randomSeed = Math.random();
         if(randomSeed < 0.05){
@@ -129,10 +116,9 @@ class Game extends Component {
     }
 
     handleAnswer(answer){
-        console.log("answer passed in is :" + answer);
         let newScore = this.state.score.valueOf();
 
-        if(answer.answerBoolean){
+        if(answer.correct){
             newScore += 100;
             fire.auth().onAuthStateChanged(function(user){
                 if (user){
@@ -159,21 +145,26 @@ class Game extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            questions: [
-                {description: "What will add(5,2) output when ran?",
-                answers:[
-                    {answerValue:"7", answerBoolean: true},
-                    {answerValue:"1", answerBoolean: false},
-                    {answerValue:"5", answerBoolean: false},
-                    {answerValue:"4", answerBoolean: false},
-                ]       
-        }
-        ]
-        })
+        fetch("http://localhost:8182/question/getAll")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                questions: result
+              });
+              this.setState({
+                  currentQuestion: this.state.questions[0],
+              })
+            },
 
-
-
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
     }
 
     handleClickShowAlert(answer) {
@@ -203,10 +194,9 @@ class Game extends Component {
     }
 
     render() {
-        console.log("this.state.mapCoord is " + this.state.mapCOORD);
+
         let map = mapList[this.state.mapCOORD[0]][this.state.mapCOORD[1]];
-        console.log("player position is :" + this.state.position);
-        console.log("map is : " + map);
+
         return (
             <div className="gameContainer" {...ArrowKeysReact.events} tabIndex="1">
                  <div className="gameBanner">
@@ -226,9 +216,9 @@ class Game extends Component {
                 </div>
                 <div className="mainDisplay"  onKeyDown={this.handleKeyDown}>
                     {(this.state.onQuestion) ? 
-                    <Question questions={this.state.questions} handleAnswer={(answer) => this.handleAnswer(answer)}/>
+                    <Question question={this.state.question} handleAnswer={(answer) => this.handleAnswer(answer)}/>
                     :
-                    <World position={this.state.position} tiles={map}/>  }
+                    <World position={this.state.position} spriteLocation={this.state.spriteLocation} tiles={map}/>  }
                 </div>
                 <div>
                     <div id={"correctAnswer"} className={`alert alert-success ${this.state.correctVisible ? 'alert-shown' : 'alert-hidden'}`} role="alert"><strong>Correct! Well done!</strong> You win the battle!</div>

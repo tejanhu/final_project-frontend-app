@@ -8,31 +8,43 @@ class Glossary extends Component{
         this.state = {
           error: null,
           isLoaded: false,
-          words: []
+          words: [],
+          allWords: []
         };
       }
+
+      
+
+    filterList(event) { 
+        var updatedList = this.state.allWords;
+        updatedList = updatedList.filter(function(word){
+            return (word.keyword).toLowerCase().search(event.target.value.toLowerCase()) !== -1;
+        }); 
+        this.setState({words: updatedList});
+    }
+      
     
-      componentDidMount() {
-        fetch("http://localhost:8182/glossary/getAll")
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                words: result
-              });
-            },
-            // Note: it's important to handle errors here
-            // instead of a catch() block so that we don't swallow
-            // exceptions from actual bugs in components.
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
-      }
+    componentDidMount() {
+    fetch("http://localhost:8182/glossary/getAll")
+        .then(res => res.json())
+        .then(
+        (result) => {
+            this.setState({
+            isLoaded: true,
+            allWords: result
+            });
+            this.setState({
+                words: this.state.allWords
+            })
+        },
+        (error) => {
+            this.setState({
+            isLoaded: true,
+            error
+            });
+        }
+        )
+    }
 
     render(){
         const { error, isLoaded, words } = this.state;
@@ -44,41 +56,36 @@ class Glossary extends Component{
             return (
 
 
-            <div id="wordsContent" class="container-fluid">
+            <div id="wordsContent" className="container-fluid">
                 <div className="jumbotron jumbotron-sm">
                     <div id="searchFunction">
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search"
-                                   aria-label="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0"
-                                    type="submit">Search
-                            </button>
+                            aria-label="Search" onChange={this.filterList.bind(this)}/>
                         </form>
                     </div>
                     <div className="container">
                         <div className="row">
-
-
                             <div className="col-sm-12 col-lg-12">
                                 <table className="table table-striped">
+                                <tr>
                                     <th>Term</th>
                                     <th>Definition</th>
-                                {this.state.words.map(word => (
-                                    <tr key={word.keyword}>
-                                        <td>{word.keyword}</td>
-                                        <td>{word.definition}</td>
-                                    </tr>
+                                </tr>{this.state.words.map(word => (
+                                <tr key={word.keyword}>
+                                    <td>{word.keyword}</td>
+                                    <td>{word.definition}</td>
+                                </tr>
                                 ))}
                                 </table>
                             </div>
                             <div class="col-sm-4">
-                                <span class="glyphicon glyphicon-signal logo"></span>
+                                <span className="glyphicon glyphicon-signal logo"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         );
     }
     }
