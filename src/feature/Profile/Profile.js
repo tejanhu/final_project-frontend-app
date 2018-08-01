@@ -10,7 +10,6 @@ class Profile extends Component{
 
     };
 
-
     render(){
 
         var options = {

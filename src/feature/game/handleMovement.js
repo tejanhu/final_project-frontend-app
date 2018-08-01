@@ -22,7 +22,6 @@ export default function handleMovement(direction, gameThis){
     }
 
     function isValidMap(mapCOORD){
-        console.log("checking if new map is valid")
         return (mapCOORD[0] >= 0 && mapCOORD[0] < MAP_LIST_HEIGHT && mapCOORD[1] >= 0 && mapCOORD[1] < MAP_LIST_WIDTH);
     }
 
@@ -54,7 +53,6 @@ export default function handleMovement(direction, gameThis){
         }
 
         if(isValidMap(newMapCOORD)){
-            console.log("changing new position to" + newPosition);
             gameThis.setState({
                     positiion: newPosition,
             })
@@ -70,8 +68,6 @@ export default function handleMovement(direction, gameThis){
     function handleMovement(direction){
         const oldPos = gameThis.state.position;
         let newPosition;
-        console.log("in handle movement oldPos is: " + oldPos);
-        console.log("direction is : " + direction);
         let newSpriteLocation = getSpriteLocation(direction);
         gameThis.setState({
             spriteLocation: newSpriteLocation
@@ -93,7 +89,7 @@ export default function handleMovement(direction, gameThis){
 
         function getSpriteLocation(direction){
             const walkIndex = getWalkIndex();
-            console.log("walkindex is : " + walkIndex)
+            
             gameThis.setState({
                 walkIndex: walkIndex
             })
