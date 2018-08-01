@@ -66,11 +66,33 @@ class Game extends Component {
         componentWillMount()
         {
             /* Create reference to messages in Firebase Database */
-            let messagesRef = fire.database().ref('Player').child('Score').orderByKey().limitToLast(100);
-            messagesRef.on('child_added', snapshot => {
-                /* Update React state when message is added at Firebase Database */
-                let message = { text: snapshot.val(), id: snapshot.key };
-                this.setState({ messages: [message].concat(this.state.messages) });
+            // let messagesRef = fire.database().ref('Player').child('Score').orderByKey().limitToLast(100);
+            // messagesRef.on('child_added', snapshot => {
+            //     /* Update React state when message is added at Firebase Database */
+            //     let message = { text: snapshot.val(), id: snapshot.key };
+            //     this.setState({ messages: [message].concat(this.state.messages) });
+            // })
+            // {fire.database().ref('Player').child('Score').on("value", function(datasnapshot)
+            // {
+            //     let myScore = datasnapshot.val().valueOf();
+            //     self.setState({
+            //         score: myScore,
+            //
+            //     })
+            // })
+            // }
+            fire.auth().onAuthStateChanged(function(user){
+                if (user){
+                    user = fire.auth().currentUser;
+                    let messagesRef = fire.database().ref(user.uid).child('Score').orderByKey().limitToLast(100);
+                    messagesRef.on('child_added', snapshot => {
+                        /* Update React state when message is added at Firebase Database */
+                        let message = { text: snapshot.val(), id: snapshot.key };
+                        this.setState({ messages: [message].concat(this.state.messages) });
+                    })
+                }else{
+
+                }
             })
         }
 
@@ -112,7 +134,19 @@ class Game extends Component {
 
         if(answer.answerBoolean){
             newScore += 100;
-            fire.database().ref('Player').child('Score').set(newScore);
+            fire.auth().onAuthStateChanged(function(user){
+                if (user){
+                    user = fire.auth().currentUser;
+                    fire.database().ref('Player').child(user.uid).child('Score').set(newScore);
+                }else{
+
+                }
+            })
+
+            fire.database().ref('Everyone').child('scored').push(newScore);
+            console.log(fire.database().ref('Everyone').child('scored'))
+            console.log('everyone')
+
             this.handleClickShowAlert("correct");
         } else {
             this.handleClickShowAlert("wrong");
@@ -137,6 +171,8 @@ class Game extends Component {
         }
         ]
         })
+
+
 
     }
 
@@ -178,7 +214,8 @@ class Game extends Component {
                       
                 </div>
                 <div className="playerInfo">
-                    <PlayerInfo score={(event) => this.state.score(event)}/>
+                    {/*<PlayerInfo score={(event) => this.state.score(event)}/>*/}
+                    <PlayerInfo/>
                 </div>
                 <div className="sideDisplay">
                     {(this.state.onQuestion) ?
